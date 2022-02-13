@@ -1,1 +1,358 @@
-hello
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>subdimension: drop point omega</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Top Bar ======= -->
+  <div id="topbar" class="d-flex align-items-center fixed-top">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+
+      <div class="languages d-none d-md-flex align-items-center">
+        <ul>
+          <li>En</li>
+          <li><a href="#">Ro</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-cente">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
+
+      <h1 class="logo me-auto me-lg-0"><a href="index.html">subdimension</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">home</a></li>
+          <li><a class="nav-link scrollto" href="#the_lab">equipment</a></li>
+          <li><a class="nav-link scrollto" href="#embedded_projects">embedded development</a></li>
+          <li><a class="nav-link scrollto" href="#linux_projects">linux development</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
+      <div class="row">
+        <div class="col-lg-8">
+          <h1>Welcome to <span>sub</span>dimension</h1>
+          <h2>enjoing 16bit micros, gentoo linux and opensource for the past two decades</h2>
+
+          <div class="btns">
+            <a href="#the_lab" class="btn-menu animated fadeInUp scrollto">the lab</a>
+            <a href="#embedded_projects" class="btn-menu animated fadeInUp scrollto">embedded projects</a>
+            <a href="#linux_projects" class="btn-book animated fadeInUp scrollto">linux projects</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="the_lab" class="specials">
+      <div class="container">
+        
+        <div class="section-title">
+          <h2>the lab</h2>
+          <p>fully kitted out electronics lab for prototype building</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6 order-1 order-lg-2">
+              <img src="/img/about.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+            <p> High quality lab equipment is used for all the design, building, debug or reverse-engineer tasks</p>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> Multiple Fluke 189 true rms multimeters with a large assortment of probes</li>
+              <li><i class="bi bi-check-circle"></i> Keysight U1733C RLC meter</li>
+              <li><i class="bi bi-check-circle"></i> Fluke 190-202 scopemeter with two isolated input channels</li>
+              <li><i class="bi bi-check-circle"></i> Flir E60 thermal imaging camera for defect localization</li>
+              <li><i class="bi bi-check-circle"></i> Instek three channel programmable power supply</li>
+              <li><i class="bi bi-check-circle"></i> Rigol DG2021A signal generator</li>
+              <li><i class="bi bi-check-circle"></i> multiple signal analizers, jtag programmers</li>
+            </ul>
+            <p> are just the creme of the crop as far as tools are concerned. </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Specials Section ======= -->
+    <section id="embedded_projects" class="specials">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Projects</h2>
+          <p>showcase of embedded projects</p>
+        </div>
+
+
+        <div class="row">
+          <div class="col-lg-6 order-2 order-lg-1 col-md-4">
+            <img src="/img/atlas430.png" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-1 order-lg-2 content">
+            <h3>atlas430</h3>
+              <p>library of HAL functions that supports arround 320 different MSP430 microcontrollers</p>
+              <p>great tool for quick prototyping and for switching from one micro to another.</p>
+              <p>seting up the system and aux clocks, any number of uart or spi master channels, an i2c connection - all happen in a few lines of code</p>
+              <p>automated datasheet parsing based on bash scripts was used to generate pin initialization functions for all 320 microcontrollers</p>
+              <p class="fst-italic">open-source firmware <a href="https://github.com/rodan/atlas430" target="_blank" class="book-a-table-btn">link to repo</a> </p>
+          </div>
+        </div>
+
+<br><br>
+        <div class="row">
+          <div class="col-lg-6 order-2 order-lg-1">
+            <img src="/img/sigdup.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-1 order-lg-2 content">
+            <h3>sigdup</h3>
+              <p>reproduce 8 channels of logic signals captured by sigrok or pulseview on the pins of a microcontroller</p>
+              <p>good for replicating exact signals that reveal flaws in system inputs - basically a hardware fuzzer</p>
+              <p>(Fuzz testing or Fuzzing is a Black Box software testing technique, which basically consists in finding implementation bugs using malformed/semi-malformed data injection in an automated fashion)</p>
+              <p class="fst-italic">open-source pc console application + firmware</p>
+              <p> <a href="https://github.com/rodan/sigdup" target="_blank" class="book-a-table-btn">link to repo</a> <a href="https://photos.app.goo.gl/z7PYmV1ht3YHNisz8" target="_blank" class="book-a-table-btn">link to images</a> </p>
+          </div>
+        </div>
+
+<br><br>
+        <div class="row">
+          <div class="col-lg-6 order-2 order-lg-1">
+            <img src="/img/7000.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-1 order-lg-2 content">
+            <h3>7000 jig</h3>
+              <p>I was tasked to implement new functionality and write firmware from scratch for about a dozen different meters that provide measurements of liquid characteristics</p>
+              <p>this jig can interact with every single one of them providing both Proof of Concept for the new features and a platform for unit-testing every time new firmware is built</p>
+              <p>later a linux GUI was developed for easy interaction via a raspberry PI-powered display</p>
+              <p class="fst-italic">closed-source linux pc application + hardware design + firmware</p>
+              <p> <a href="https://photos.app.goo.gl/Q5Ar6u3Z5xs9cPmH9" target="_blank" class="book-a-table-btn">link to images</a></p>
+          </div>
+        </div>
+
+<br><br>
+        <div class="row">
+          <div class="col-lg-6 order-2 order-lg-1">
+            <img src="/img/lemidi.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-1 order-lg-2 content">
+            <h3>lemidi</h3>
+              <p>small device that allows 90's PC hardware to work with modern USB joysticks. in the 90's all joysticks/gamepads were designed to be plugged into the midi port provided by the soundcards of the era. </p>
+              <p>this device provides a USB host interface, gets the positional information from the modern joystick and simulates an analog joystick on it's 'midi' output. all that in under 5ms of processing time.</p>
+              <p class="fst-italic">open-source hardware design + firmware</p>
+              <p> <a href="https://photos.app.goo.gl/fXdDBng4dvEepq8V7" target="_blank" class="book-a-table-btn">link to images</a> <a href="https://github.com/rodan/lemidi" target="_blank" class="book-a-table-btn">link to repo</a></p>
+          </div>
+        </div>
+
+<br><br>
+        <div class="row">
+          <div class="col-lg-6 order-2 order-lg-1">
+            <img src="/img/ucurrent.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-1 order-lg-2 content">
+            <h3>µCurrent controller</h3>
+              <p>mod to Dave Jones's µCurrent device that replaces the coin-cell with an intelligent power delivery module that has auto-power-off, an 16bit ADC and serial connectivity</p>
+              <p class="fst-italic">open-source hardware design + firmware</p>
+              <p> <a href="https://photos.app.goo.gl/GjHpzLgLqz9fdpvY7" target="_blank" class="book-a-table-btn">link to images</a> <a href="https://github.com/rodan/ucurrent_ctrl" target="_blank" class="book-a-table-btn">link to repo</a></p>
+          </div>
+        </div>        
+
+
+<br><br>
+        <div class="row">
+          <div class="col-lg-6 order-2 order-lg-1">
+            <img src="/img/ampy.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-1 order-lg-2 content">
+            <h3>ampy</h3>
+              <p>a highly-modular audio quad amplifier made from scratch that has a 5 channel mixer, variable front-rear panning and can be controlled via an infrared remote or a PC application via bluetooth</p>
+              <p>a total of three microcontrollers were inside this amp, all controlling different subsystems</p>
+              <p>on the pc side, the popular alsamixer linux application was forked and modified to communicate over bluetooth with the amp instead of controlling a local soundcard. it was able to control the volume for all channels (all with separate balance control), the fron-rear pan and toggle the switches present on the power amp board.</p>
+              <p class="fst-italic">open-source linux application + hardware design + firmware</p>
+              <p> <a href="https://photos.app.goo.gl/L8txqSKrcZFV2BbR8" target="_blank" class="book-a-table-btn">link to images</a> <a href="https://github.com/rodan/ampy" target="_blank" class="book-a-table-btn">link to repo</a></p>
+          </div>
+        </div>
+
+<br><br>
+        <div class="row">
+          <div class="col-lg-6 order-2 order-lg-1">
+            <img src="/img/tracy.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-1 order-lg-2 content">
+            <h3>tracy</h3>
+              <p>dissapointed by a 100EUR commercial UK-made tracking device I decided to make my own</p>
+              <p>worked great for a few European trips, but 2G gprs connectivity got removed in most countries by 2019, so a new design based on a different modem is needed for roaming with this device</p>
+              <p class="fst-italic">open-source hardware design + firmware + web scripts</p>
+              <p> <a href="https://photos.app.goo.gl/5ZgdGM5Km6QHHfX5A" target="_blank" class="book-a-table-btn">link to images</a> <a href="https://github.com/rodan/tracy" target="_blank" class="book-a-table-btn">link to repo</a>  <a href="https://github.com/rodan/tracy/blob/master/doc/tracy_manual.pdf" target="_blank" class="book-a-table-btn">link to manual</a>  </p>
+          </div>
+        </div>
+
+<br><br>
+        <div class="row">
+          <div class="col-lg-6 order-2 order-lg-1">
+            <img src="/img/chronos.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-1 order-lg-2 content">
+            <h3>openchronos-rfsw</h3>
+              <p>fork of the openchronos project that runs on a Texas Instruments ez430-chronos development board/watch</p>
+              <p>the modification that was added inserts a new menu page from which RF commands can be sent out via the onboard RF transceiver to Intertechno home-automation modules</p>
+              <p>the Intertechno protocol was reverse-engineered and implemented as msp430/arduino library so it can be used with non-RF capable microcontrollers. a small external module (or even the original remote control) can be used to send out the OOK signals on 433MHz</p>
+              <p class="fst-italic">open-source firmware <a href="https://photos.app.goo.gl/urJm1KrpPNyVTQta7" target="_blank" class="book-a-table-btn">link to images</a> <a href="https://github.com/rodan/openchronos-rfsw" target="_blank" class="book-a-table-btn">link to repo</a></p>
+          </div>
+        </div>
+
+<br><br>
+        <div class="row">
+          <div class="col-lg-6 order-2 order-lg-1">
+            <img src="/img/archery.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-1 order-lg-2 content">
+            <h3>target butler</h3>
+              <p>sound wave triangulation used to detect location of arrow strikes on a 60cm FITA archery target face</p>
+              <p>project was properly detecting the strike location in brand-new targets, but not in used ones where material is no longer homogeneous</p>
+              <p class="fst-italic">open-source hardware + firmware <a href="https://github.com/rodan/target_butler" target="_blank" class="book-a-table-btn">link to repo</a>  </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End embedded projects section -->
+
+
+    <section id="linux_projects" class="specials">
+      <div class="container"  data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Projects</h2>
+          <p>showcase of open-source linux projects</p>
+        </div>
+
+        <div class="row">
+          <div class="content">
+            <h3>iotcpd<h3>
+              <p>a generic STDIO to TCP redirector daemon.</p>
+              <p>it can start multiple identical non-networking enabled daemons that only interact via stdin/stdout and query them based on requests received via TCP.</p>
+              <p>the request is sent to the stdin of one of the daemons that is available and the reply from its stdout is then sent to the requester via TCP. the connection is then torn down. basically an inetd/xinetd/tcpserver on crack.</p>
+              <p>epoll API functions are used to handle incoming connections.</p>
+              <p class="fst-italic">open-source software <a href="https://github.com/rodan/iotcpd" target="_blank" class="book-a-table-btn">link to repo</a> </p>
+          </div>
+        </div>
+<br><br>
+
+        <div class="row">
+          <div class="content">
+            <h3>cwiticald<h3>
+              <p>an Entropy Gathering Daemon that provides a random stream generated by a USB TrueRNG device via TCP</p>
+              <p>cwiticald reads blocks of 2500 bytes from /dev/truerng, verifies their compliance against FIPS 140-1 and FIPS 140-2 tests, fills up a large buffer and provides it to clients that connect to it via TCPv4 or TCPv6.</p>
+              <p class="fst-italic">open-source software <a href="https://github.com/rodan/cwiticald" target="_blank" class="book-a-table-btn">link to repo</a> </p>
+          </div>
+        </div>
+<br><br>
+
+        <div class="row">
+          <div class="content">
+            <h3>daemontools-scripts<h3>
+              <p>collection of init scripts to be used in conjunction with DJBerstein's daemontools package</p>
+              <p>also provides initial process context switching for selinux environments</p>
+              <p class="fst-italic">open-source software <a href="https://github.com/rodan/daemontools-scripts" target="_blank" class="book-a-table-btn">link to repo</a> </p>
+          </div>
+        </div>
+<br><br>
+
+        <div class="row">
+          <div class="content">
+            <h3>laboule<h3>
+              <p>the iptables chain manager for impolite IPs</p>
+              <p>daemonized bash script that manages an iptables chain and can ban IPs for incrementaly bigger timeframes</p>
+              <p class="fst-italic">open-source software <a href="https://github.com/rodan/laboule" target="_blank" class="book-a-table-btn">link to repo</a> </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End linux projects section -->
+
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>subdimension</h3>
+              <p>
+                Cluj-Napoca <br>
+                Romania<br><br>
+                <strong>Phone:</strong> +40 721580040<br>
+                <strong>Email:</strong> 093273 @ subdimension.ro<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="https://www.linkedin.com/in/petrerodan/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                <a href="https://www.github.com/rodan/" class="github"><i class="bx bxl-github"></i></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright 2022 <strong><span>Petre Rodan</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/restaurantly-restaurant-template/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
