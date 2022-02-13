@@ -1,0 +1,78 @@
+\hypertarget{lib__convert_8h}{}\doxysection{glue/generic/lib\+\_\+convert.h File Reference}
+\label{lib__convert_8h}\index{glue/generic/lib\_convert.h@{glue/generic/lib\_convert.h}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__lib__convert_ga3bcc3694d2d4f788956ae6ef805e06c2}{CONV\+\_\+\+BASE\+\_\+2\+\_\+\+BUF\+\_\+\+SZ}}~19
+\begin{DoxyCompactList}\small\item\em buffer size needed for converting number into string in binary representation \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__lib__convert_gab629046f9aae397c8ea7f11bcb62d052}{CONV\+\_\+\+BASE\+\_\+10\+\_\+\+BUF\+\_\+\+SZ}}~12
+\begin{DoxyCompactList}\small\item\em buffer size needed for converting number into string in decimal representation (-\/2147483648 + ending 0 is 12 bytes long) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__lib__convert_gaa1153bf38b00bd00985c997d20c1a205}{CONV\+\_\+\+BASE\+\_\+16\+\_\+\+BUF\+\_\+\+SZ}}~12
+\begin{DoxyCompactList}\small\item\em buffer size needed for converting number into string in hexadecimal representation \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__lib__convert_ga73efe787c131b385070f25d18b7c9aa4}{EXIT\+\_\+\+FAILURE}}~1
+\begin{DoxyCompactList}\small\item\em define EXIT\+\_\+\+FAILURE just in case stdlib.\+h is not included \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__lib__convert_ga687984f47d8cce148d1b914d2b79612a}{EXIT\+\_\+\+SUCCESS}}~0
+\begin{DoxyCompactList}\small\item\em define EXIT\+\_\+\+FAILURE just in case stdlib.\+h is not included \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__lib__convert_gaf8b75c966f5e415f5d5de1e747f95153}{pad\+\_\+type}} \{ \mbox{\hyperlink{group__lib__convert_ggaf8b75c966f5e415f5d5de1e747f95153a972d1f0f1d4eaf1ad07c50201291ee32}{PAD\+\_\+\+NONE}}
+, \mbox{\hyperlink{group__lib__convert_ggaf8b75c966f5e415f5d5de1e747f95153a199dae95ae6473699f59f3073424b7fb}{PAD\+\_\+\+ZEROES}}
+, \mbox{\hyperlink{group__lib__convert_ggaf8b75c966f5e415f5d5de1e747f95153a48e9c5e224bb18f9b94e050242e63971}{PAD\+\_\+\+SPACES}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{group__lib__convert_ga6c01d288f859b1771998331b9dba1245}{\+\_\+utob}} (char $\ast$buf, const uint16\+\_\+t val)
+\item 
+char $\ast$ \mbox{\hyperlink{group__lib__convert_ga81afccff121c223980c115b034fdad84}{\+\_\+utoh}} (char $\ast$buf, const uint32\+\_\+t val)
+\item 
+char $\ast$ \mbox{\hyperlink{group__lib__convert_gab894ef0e8e2ce05585016fb2adb3e124}{\+\_\+utoh8}} (char $\ast$buf, const uint32\+\_\+t val)
+\item 
+char $\ast$ \mbox{\hyperlink{group__lib__convert_gac996b3ed7bc3ff4d7dc1abc4f072abd8}{\+\_\+utoh16}} (char $\ast$buf, const uint32\+\_\+t val)
+\item 
+char $\ast$ \mbox{\hyperlink{group__lib__convert_ga22656122b5ed7ee1bae7e746e159c9df}{\+\_\+utoh32}} (char $\ast$buf, const uint32\+\_\+t val)
+\item 
+char $\ast$ \mbox{\hyperlink{group__lib__convert_gabbd688e17129b99f503dba4fe17ed876}{\+\_\+utorh}} (char $\ast$buf, const uint32\+\_\+t val, const uint8\+\_\+t pad\+\_\+size)
+\item 
+char $\ast$ \mbox{\hyperlink{group__lib__convert_ga043d6584b9fccf61d2b19045ddf5a903}{\+\_\+utoa}} (char $\ast$buf, const uint32\+\_\+t val)
+\item 
+char $\ast$ \mbox{\hyperlink{group__lib__convert_gaf2a2c41ce9d07c74eb2d2ad33e12d250}{\+\_\+itoa}} (char $\ast$buf, const int32\+\_\+t val)
+\item 
+char $\ast$ \mbox{\hyperlink{group__lib__convert_ga94a54b29643a93d85657bdfdb262e41b}{\+\_\+i16toa}} (char $\ast$buf, const int16\+\_\+t val)
+\item 
+char $\ast$ \mbox{\hyperlink{group__lib__convert_gaaa2d12bc285dbd31cba57db8380564e2}{prepend\+\_\+padding}} (char $\ast$buf, char $\ast$converted\+\_\+buf, const \mbox{\hyperlink{group__lib__convert_gaf8b75c966f5e415f5d5de1e747f95153}{pad\+\_\+type}} padding\+\_\+type, const uint8\+\_\+t target\+\_\+len)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group__lib__convert_ga96fbbde920e113e10c1bc24f9d16a916}{str\+\_\+to\+\_\+uint8}} (char $\ast$str, uint8\+\_\+t $\ast$out, const uint8\+\_\+t seek, const uint8\+\_\+t len, const uint8\+\_\+t min, const uint8\+\_\+t max)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group__lib__convert_ga2c3981742703d6bb1a310e7521689cac}{str\+\_\+to\+\_\+uint16}} (char $\ast$str, uint16\+\_\+t $\ast$out, const uint8\+\_\+t seek, const uint8\+\_\+t len, const uint16\+\_\+t min, const uint16\+\_\+t max)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group__lib__convert_ga6f034e26f1ca7841189346743d8d84ca}{str\+\_\+to\+\_\+uint32}} (char $\ast$str, uint32\+\_\+t $\ast$out, const uint8\+\_\+t seek, const uint8\+\_\+t len, const uint32\+\_\+t min, const uint32\+\_\+t max)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group__lib__convert_ga0bd003da494831d5cabeaf2bf22334ea}{str\+\_\+to\+\_\+int32}} (char $\ast$str, int32\+\_\+t $\ast$out, const uint8\+\_\+t seek, const uint8\+\_\+t len, const int32\+\_\+t min, const int32\+\_\+t max)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group__lib__convert_gaf57fc2890e0bf75e60d6444e3ed404c7}{hstr\+\_\+to\+\_\+uint8}} (char $\ast$str, uint8\+\_\+t $\ast$out, const uint8\+\_\+t seek, const uint8\+\_\+t len, const uint8\+\_\+t min, const uint16\+\_\+t max)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group__lib__convert_ga440a3ac2d8c63ae23c5871b32820f020}{hstr\+\_\+to\+\_\+uint16}} (char $\ast$str, uint16\+\_\+t $\ast$out, const uint8\+\_\+t seek, const uint8\+\_\+t len, const uint16\+\_\+t min, const uint16\+\_\+t max)
+\item 
+void \mbox{\hyperlink{group__lib__convert_gac9d55b90e6812a77fef501aaba870e2a}{mem2ascii}} (uint8\+\_\+t $\ast$data\+\_\+in, uint8\+\_\+t $\ast$data\+\_\+out, uint8\+\_\+t len)
+\item 
+void \mbox{\hyperlink{group__lib__convert_ga5d74d7969c0a5515d2ce589840ae60b5}{ascii2mem}} (uint8\+\_\+t $\ast$data\+\_\+in, uint8\+\_\+t $\ast$data\+\_\+out, uint8\+\_\+t len)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group__lib__convert_gabdd48d30ab32c0c1d5ffdcdb7043ef81}{dec\+\_\+to\+\_\+bcd}} (const uint8\+\_\+t val)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group__lib__convert_ga2ac3f33f6d518519cb6d9c622e24136a}{bcd\+\_\+to\+\_\+dec}} (const uint8\+\_\+t val)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__lib__convert_gaf47a47717162ea9adb1caaf15a12a2d9}{\+\_\+wiretou32}} (char $\ast$buf, const uint16\+\_\+t seek, const uint16\+\_\+t len)
+\item 
+uint16\+\_\+t \mbox{\hyperlink{group__lib__convert_ga957b188f6047d6a97579ac739886c1c0}{\+\_\+flip\+\_\+u16}} (const uint16\+\_\+t val)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__lib__convert_ga3433a396a52456daf52933ccc76bf82b}{\+\_\+flip\+\_\+u32}} (const uint32\+\_\+t val)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file for the data conversion library \begin{DoxyAuthor}{Author}
+Petre Rodan \href{mailto:2b4eda@subdimension.ro}{\texttt{ 2b4eda@subdimension.\+ro}} 
+\end{DoxyAuthor}

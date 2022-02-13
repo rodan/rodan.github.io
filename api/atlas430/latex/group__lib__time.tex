@@ -1,0 +1,52 @@
+\hypertarget{group__lib__time}{}\doxysection{time and date conversion library}
+\label{group__lib__time}\index{time and date conversion library@{time and date conversion library}}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structts}{ts}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint64\+\_\+t \mbox{\hyperlink{group__lib__time_ga14e0f329fe6aa14d5ef20397e23f9cb4}{get\+\_\+unixtime}} (struct \mbox{\hyperlink{structts}{ts}} t)
+\item 
+void \mbox{\hyperlink{group__lib__time_ga232f9531f1f4da899dd7bfd8f1397f53}{\+\_\+gmtime}} (time\+\_\+t sec\+\_\+since\+\_\+2000, struct tm $\ast$p\+\_\+time)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+simple functions for converting time and date data between different formats
+
+to be used when the libc implementation takes too much space 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__lib__time_ga232f9531f1f4da899dd7bfd8f1397f53}\label{group__lib__time_ga232f9531f1f4da899dd7bfd8f1397f53}} 
+\index{time and date conversion library@{time and date conversion library}!\_gmtime@{\_gmtime}}
+\index{\_gmtime@{\_gmtime}!time and date conversion library@{time and date conversion library}}
+\doxysubsubsection{\texorpdfstring{\_gmtime()}{\_gmtime()}}
+{\footnotesize\ttfamily void \+\_\+gmtime (\begin{DoxyParamCaption}\item[{time\+\_\+t}]{sec\+\_\+since\+\_\+2000,  }\item[{struct tm $\ast$}]{p\+\_\+time }\end{DoxyParamCaption})}
+
+function that converts the number of seconds since January 1st 2000 into a tm structure 
+\begin{DoxyParams}{Parameters}
+{\em sec\+\_\+since\+\_\+2000} & input time\+\_\+t (uint32\+\_\+t) seconds since January 1st 2000 \\
+\hline
+{\em p\+\_\+time} & input the converted tm struct \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__lib__time_ga14e0f329fe6aa14d5ef20397e23f9cb4}\label{group__lib__time_ga14e0f329fe6aa14d5ef20397e23f9cb4}} 
+\index{time and date conversion library@{time and date conversion library}!get\_unixtime@{get\_unixtime}}
+\index{get\_unixtime@{get\_unixtime}!time and date conversion library@{time and date conversion library}}
+\doxysubsubsection{\texorpdfstring{get\_unixtime()}{get\_unixtime()}}
+{\footnotesize\ttfamily uint64\+\_\+t get\+\_\+unixtime (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structts}{ts}}}]{t }\end{DoxyParamCaption})}
+
+return the number of seconds since 01.\+01.\+1970 00\+:00\+:00 UTC 
+\begin{DoxyParams}{Parameters}
+{\em t} & input ts time structure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+calculated unixtime 
+\end{DoxyReturn}

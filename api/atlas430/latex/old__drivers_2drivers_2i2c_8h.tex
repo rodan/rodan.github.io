@@ -1,0 +1,68 @@
+\hypertarget{old__drivers_2drivers_2i2c_8h}{}\doxysection{old\+\_\+drivers/drivers/i2c.h File Reference}
+\label{old__drivers_2drivers_2i2c_8h}\index{old\_drivers/drivers/i2c.h@{old\_drivers/drivers/i2c.h}}
+
+
+Include file for \mbox{\hyperlink{group__MOD__I2C}{I2C Bus}}.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structi2c__package__t}{i2c\+\_\+package\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries I2\+C\+\_\+\+READ}~0x1
+\item 
+\#define {\bfseries I2\+C\+\_\+\+WRITE}~0x2
+\item 
+\#define {\bfseries I2\+C\+\_\+\+SDA\+\_\+\+WAIT}~0x4
+\item 
+\#define {\bfseries I2\+C\+\_\+\+LAST\+\_\+\+NAK}~0x8
+\item 
+\#define {\bfseries I2\+C\+\_\+\+NO\+\_\+\+ADDR\+\_\+\+SHIFT}~0x10
+\item 
+\#define {\bfseries I2\+C\+\_\+\+REPEAT\+\_\+\+SA\+\_\+\+ON\+\_\+\+READ}~0x20
+\item 
+\#define {\bfseries I2\+C\+\_\+\+SHT\+\_\+\+INIT}~0x40
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__MOD__I2C_gada1e8e589688e2d6626421d8d85d9c53}{i2c\+\_\+status\+\_\+t}} \{ \newline
+\mbox{\hyperlink{group__MOD__I2C_ggada1e8e589688e2d6626421d8d85d9c53a7810297ccb052132c025d8038759159e}{I2\+C\+\_\+\+IDLE}}
+, \mbox{\hyperlink{group__MOD__I2C_ggada1e8e589688e2d6626421d8d85d9c53a49e65f3960437d80b8328e7898cc90de}{I2\+C\+\_\+\+BUSY}}
+, \mbox{\hyperlink{group__MOD__I2C_ggada1e8e589688e2d6626421d8d85d9c53ad6448435af75b501874c2c2ba89d6e34}{I2\+C\+\_\+\+FAILED}}
+, \mbox{\hyperlink{group__MOD__I2C_ggada1e8e589688e2d6626421d8d85d9c53a7810297ccb052132c025d8038759159e}{I2\+C\+\_\+\+IDLE}}
+, \newline
+\mbox{\hyperlink{group__MOD__I2C_ggada1e8e589688e2d6626421d8d85d9c53a49e65f3960437d80b8328e7898cc90de}{I2\+C\+\_\+\+BUSY}}
+, \mbox{\hyperlink{group__MOD__I2C_ggada1e8e589688e2d6626421d8d85d9c53ad6448435af75b501874c2c2ba89d6e34}{I2\+C\+\_\+\+FAILED}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__MOD__I2C_ga5730d9445429351b9f750084c5cb5aae}{i2c\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize the I2C master module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOD__I2C_gac15efb7df754e311fb8084edb7eb187a}{i2c\+\_\+uninit}} (void)
+\begin{DoxyCompactList}\small\item\em Uninitialize the I2C master module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOD__I2C_gaa5805737db64d1f0376404659e54477e}{i2c\+\_\+transfer\+\_\+start}} (const \mbox{\hyperlink{structi2c__package__t}{i2c\+\_\+package\+\_\+t}} $\ast$pkg, void($\ast$callback)(\mbox{\hyperlink{group__MOD__I2C_gada1e8e589688e2d6626421d8d85d9c53}{i2c\+\_\+status\+\_\+t}} result))
+\begin{DoxyCompactList}\small\item\em Start an I2C transfer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__MOD__I2C_gada1e8e589688e2d6626421d8d85d9c53}{i2c\+\_\+status\+\_\+t}} \mbox{\hyperlink{group__MOD__I2C_ga78f76f18ee80f78cbf6172166ebeb8f8}{i2c\+\_\+transfer\+\_\+status}} (void)
+\begin{DoxyCompactList}\small\item\em Get the status of the I2C module. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structi2c__package__t}{i2c\+\_\+package\+\_\+t}} {\bfseries pkg}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Include file for \mbox{\hyperlink{group__MOD__I2C}{I2C Bus}}. 
+
+\begin{DoxyAuthor}{Author}
+Alex Mykyta 
+\end{DoxyAuthor}

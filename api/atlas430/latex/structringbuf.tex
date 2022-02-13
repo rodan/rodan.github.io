@@ -1,0 +1,49 @@
+\hypertarget{structringbuf}{}\doxysection{ringbuf Struct Reference}
+\label{structringbuf}\index{ringbuf@{ringbuf}}
+
+
+Structure that holds the state of a ring buffer.  
+
+
+
+
+{\ttfamily \#include $<$lib\+\_\+ringbuf.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structringbuf_ae1472129ec96ef39782f87836fb670da}\label{structringbuf_ae1472129ec96ef39782f87836fb670da}} 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{structringbuf_ae1472129ec96ef39782f87836fb670da}{data}}
+\begin{DoxyCompactList}\small\item\em buffer containing the ring buffer \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{structringbuf_a78d6347a4464086fdbae6258c1e603c4}{mask}}
+\item 
+\mbox{\Hypertarget{structringbuf_ad8ed0f67d2d85a7707d271ae9386dcf8}\label{structringbuf_ad8ed0f67d2d85a7707d271ae9386dcf8}} 
+uint8\+\_\+t \mbox{\hyperlink{structringbuf_ad8ed0f67d2d85a7707d271ae9386dcf8}{put\+\_\+ptr}}
+\begin{DoxyCompactList}\small\item\em pointer to the byte to be written \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structringbuf_af4b195d1d47a3190deb1d646e9a04528}\label{structringbuf_af4b195d1d47a3190deb1d646e9a04528}} 
+uint8\+\_\+t \mbox{\hyperlink{structringbuf_af4b195d1d47a3190deb1d646e9a04528}{get\+\_\+ptr}}
+\begin{DoxyCompactList}\small\item\em pointer to the byte to be read \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structure that holds the state of a ring buffer. 
+
+\begin{DoxyVerb}        This structure holds the state of a ring buffer. The
+        actual buffer needs to be defined separately. This
+        struct is an opaque structure with no user-visible
+        elements.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structringbuf_a78d6347a4464086fdbae6258c1e603c4}\label{structringbuf_a78d6347a4464086fdbae6258c1e603c4}} 
+\index{ringbuf@{ringbuf}!mask@{mask}}
+\index{mask@{mask}!ringbuf@{ringbuf}}
+\doxysubsubsection{\texorpdfstring{mask}{mask}}
+{\footnotesize\ttfamily uint8\+\_\+t ringbuf\+::mask}
+
+buffer size -\/ 1 /note the size needs to be a power of two 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+glue/generic/\mbox{\hyperlink{lib__ringbuf_8h}{lib\+\_\+ringbuf.\+h}}\end{DoxyCompactItemize}

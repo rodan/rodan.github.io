@@ -1,0 +1,32 @@
+\hypertarget{mcp42_8h}{}\doxysection{glue/generic/mcp42.h File Reference}
+\label{mcp42_8h}\index{glue/generic/mcp42.h@{glue/generic/mcp42.h}}
+
+
+Include file for \mbox{\hyperlink{group__MOD__DRIVERS}{Maxim DS3234 IC driver}}.  
+
+
+{\ttfamily \#include $<$msp430.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__MOD__DRIVERS_ga518834706b17964c9b6d353710343709}{MCP42\+\_\+\+WRITE\+\_\+\+DATA}}~0x10
+\begin{DoxyCompactList}\small\item\em MCP42\+XXX bitflags. \end{DoxyCompactList}\item 
+\#define {\bfseries MCP42\+\_\+\+SHUTDOWN}~0x20
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__MOD__DRIVERS_ga654157de67fd31dea5d234f70961cb7d}{MCP42\+\_\+set\+\_\+pot\+\_\+ch}} (const \mbox{\hyperlink{group__MOD__SPI_ga3495a938aee225923b71614a09e22bc3}{spi\+\_\+descriptor}} $\ast$spid, const uint8\+\_\+t pot\+\_\+id, const uint8\+\_\+t pot\+\_\+val)
+\item 
+void \mbox{\hyperlink{group__MOD__DRIVERS_ga1723cacf8656436393dd3c16b8779b92}{MCP42\+\_\+set\+\_\+pot}} (const \mbox{\hyperlink{group__MOD__SPI_ga3495a938aee225923b71614a09e22bc3}{spi\+\_\+descriptor}} $\ast$spid, const uint8\+\_\+t pot\+\_\+ch0\+\_\+val, const uint8\+\_\+t pot\+\_\+ch1\+\_\+val)
+\item 
+void \mbox{\hyperlink{group__MOD__DRIVERS_ga2e94464c48d3712ad70ab82c78c2fde2}{MCP42\+\_\+shutdown\+\_\+pot}} (const \mbox{\hyperlink{group__MOD__SPI_ga3495a938aee225923b71614a09e22bc3}{spi\+\_\+descriptor}} $\ast$spid, const uint8\+\_\+t pot\+\_\+id)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Include file for \mbox{\hyperlink{group__MOD__DRIVERS}{Maxim DS3234 IC driver}}. 
+
+\begin{DoxyAuthor}{Author}
+Petre Rodan 
+\end{DoxyAuthor}

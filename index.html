@@ -12,7 +12,7 @@
   <!-- Favicons -->
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i%7CPlayfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700%7CPoppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -41,7 +41,7 @@
   <header id="header" class="fixed-top d-flex align-items-cente">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
 
-      <h1 class="logo me-auto me-lg-0"><a href="index.html">subdimension</a></h1>
+      <h2 class="logo me-auto me-lg-0"><a href="index.html">subDIMENSION</a></h2>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -63,7 +63,7 @@
     <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
       <div class="row">
         <div class="col-lg-8">
-          <h1>Welcome to <span>sub</span>dimension</h1>
+          <h1>Welcome to <span>sub</span>DIMENSION</h1>
           <h2>enjoing 16bit micros, gentoo linux and opensource for the past two decades</h2>
 
           <div class="btns">
@@ -96,7 +96,7 @@
             <ul>
               <li><i class="bi bi-check-circle"></i> Multiple Fluke 189 true rms multimeters with a large assortment of probes</li>
               <li><i class="bi bi-check-circle"></i> Keysight U1733C RLC meter</li>
-              <li><i class="bi bi-check-circle"></i> Fluke 190-202 scopemeter with two isolated input channels</li>
+              <li><i class="bi bi-check-circle"></i> Fluke 190-202 scopemeter with two isolated channels</li>
               <li><i class="bi bi-check-circle"></i> Flir E60 thermal imaging camera for defect localization</li>
               <li><i class="bi bi-check-circle"></i> Instek three channel programmable power supply</li>
               <li><i class="bi bi-check-circle"></i> Rigol DG2021A signal generator</li>
@@ -114,7 +114,7 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Projects</h2>
+          <h2>projects</h2>
           <p>showcase of embedded projects</p>
         </div>
 
@@ -127,9 +127,9 @@
             <h3>atlas430</h3>
               <p>library of HAL functions that supports arround 320 different MSP430 microcontrollers</p>
               <p>great tool for quick prototyping and for switching from one micro to another.</p>
-              <p>seting up the system and aux clocks, any number of uart or spi master channels, an i2c connection - all happen in a few lines of code</p>
+              <p>setting up the system and aux clocks, any number of uart or spi master channels, an i2c connection - all happen in a few lines of code</p>
               <p>automated datasheet parsing based on bash scripts was used to generate pin initialization functions for all 320 microcontrollers</p>
-              <p class="fst-italic">open-source firmware <a href="https://github.com/rodan/atlas430" target="_blank" class="book-a-table-btn">link to repo</a> </p>
+              <p class="fst-italic">open-source firmware <a href="https://github.com/rodan/atlas430" target="_blank" class="book-a-table-btn">link to repo</a> <a href="/api/atlas430/html/modules.html" target="_blank" class="book-a-table-btn">link to API documentation</a> </p>
           </div>
         </div>
 
@@ -156,10 +156,10 @@
           <div class="col-lg-6 pt-4 pt-lg-0 order-1 order-lg-2 content">
             <h3>7000 jig</h3>
               <p>I was tasked to implement new functionality and write firmware from scratch for about a dozen different meters that provide measurements of liquid characteristics</p>
-              <p>this jig can interact with every single one of them providing both Proof of Concept for the new features and a platform for unit-testing every time new firmware is built</p>
+              <p>this jig can interact with every single one of them providing both Proof of Concept for the new features and a platform for unit-testing every time new meter firmware is built</p>
               <p>later a linux GUI was developed for easy interaction via a raspberry PI-powered display</p>
               <p class="fst-italic">closed-source linux pc application + hardware design + firmware</p>
-              <p> <a href="https://photos.app.goo.gl/Q5Ar6u3Z5xs9cPmH9" target="_blank" class="book-a-table-btn">link to images</a></p>
+              <p> <a href="https://photos.app.goo.gl/Q5Ar6u3Z5xs9cPmH9" target="_blank" class="book-a-table-btn">link to images & videos</a> <a href="https://drive.google.com/file/d/1Wve10sTdEO6eV5CRYKQnvv15rm44Usfc/view?usp=sharing" target="_blank" class="book-a-table-btn">link to manual</a>  </p>
           </div>
         </div>
 
@@ -200,7 +200,7 @@
             <h3>ampy</h3>
               <p>a highly-modular audio quad amplifier made from scratch that has a 5 channel mixer, variable front-rear panning and can be controlled via an infrared remote or a PC application via bluetooth</p>
               <p>a total of three microcontrollers were inside this amp, all controlling different subsystems</p>
-              <p>on the pc side, the popular alsamixer linux application was forked and modified to communicate over bluetooth with the amp instead of controlling a local soundcard. it was able to control the volume for all channels (all with separate balance control), the fron-rear pan and toggle the switches present on the power amp board.</p>
+              <p>on the pc side, the popular alsamixer linux application was forked and modified to communicate over bluetooth with the amp instead of controlling a local soundcard. it was able to control the volume for all channels (all with separate balance control), the front-rear pan and toggle the switches present on the power amp board.</p>
               <p class="fst-italic">open-source linux application + hardware design + firmware</p>
               <p> <a href="https://photos.app.goo.gl/L8txqSKrcZFV2BbR8" target="_blank" class="book-a-table-btn">link to images</a> <a href="https://github.com/rodan/ampy" target="_blank" class="book-a-table-btn">link to repo</a></p>
           </div>
@@ -255,13 +255,25 @@
       <div class="container"  data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Projects</h2>
+          <h2>projects</h2>
           <p>showcase of open-source linux projects</p>
         </div>
 
         <div class="row">
           <div class="content">
-            <h3>iotcpd<h3>
+            <h3>simple catalyst</h3>
+              <p>Gentoo-based livecd creator tool</p>
+              <p>after using Gentoo's catalyst program for the last few years I got tired to keep patching every new version of it with the changes I needed, so i wrote a much simplified tool that does the job of creating a small livecd iso image.</p>
+              <p>does not support cross-compiling, multiple loop types or multiple bootloaders nor does it compile a kernel for you. it just takes a stage3 image and a portage snapshot, a few spec files as input and compiles whatever packages are specified, cleans up things and provides the iso. magic, I tell you.</p>
+              <p class="fst-italic">open-source software <a href="https://github.com/rodan/simple_catalyst" target="_blank" class="book-a-table-btn">link to repo</a> <a href="https://subdimension.ro/livecd/livecd-tiny-2018.04-amd64.iso" target="_blank" class="book-a-table-btn">link to latest livecd</a> </p>
+          </div>
+        </div>
+<br><br>
+
+
+        <div class="row">
+          <div class="content">
+            <h3>iotcpd</h3>
               <p>a generic STDIO to TCP redirector daemon.</p>
               <p>it can start multiple identical non-networking enabled daemons that only interact via stdin/stdout and query them based on requests received via TCP.</p>
               <p>the request is sent to the stdin of one of the daemons that is available and the reply from its stdout is then sent to the requester via TCP. the connection is then torn down. basically an inetd/xinetd/tcpserver on crack.</p>
@@ -273,7 +285,7 @@
 
         <div class="row">
           <div class="content">
-            <h3>cwiticald<h3>
+            <h3>cwiticald</h3>
               <p>an Entropy Gathering Daemon that provides a random stream generated by a USB TrueRNG device via TCP</p>
               <p>cwiticald reads blocks of 2500 bytes from /dev/truerng, verifies their compliance against FIPS 140-1 and FIPS 140-2 tests, fills up a large buffer and provides it to clients that connect to it via TCPv4 or TCPv6.</p>
               <p class="fst-italic">open-source software <a href="https://github.com/rodan/cwiticald" target="_blank" class="book-a-table-btn">link to repo</a> </p>
@@ -283,7 +295,7 @@
 
         <div class="row">
           <div class="content">
-            <h3>daemontools-scripts<h3>
+            <h3>daemontools-scripts</h3>
               <p>collection of init scripts to be used in conjunction with DJBerstein's daemontools package</p>
               <p>also provides initial process context switching for selinux environments</p>
               <p class="fst-italic">open-source software <a href="https://github.com/rodan/daemontools-scripts" target="_blank" class="book-a-table-btn">link to repo</a> </p>
@@ -293,7 +305,7 @@
 
         <div class="row">
           <div class="content">
-            <h3>laboule<h3>
+            <h3>laboule</h3>
               <p>the iptables chain manager for impolite IPs</p>
               <p>daemonized bash script that manages an iptables chain and can ban IPs for incrementaly bigger timeframes</p>
               <p class="fst-italic">open-source software <a href="https://github.com/rodan/laboule" target="_blank" class="book-a-table-btn">link to repo</a> </p>
@@ -303,6 +315,7 @@
       </div>
     </section><!-- End linux projects section -->
 
+  </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
   <footer id="footer">

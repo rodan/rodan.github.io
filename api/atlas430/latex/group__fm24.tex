@@ -1,0 +1,119 @@
+\hypertarget{group__fm24}{}\doxysection{ferroelectric random access memory driver}
+\label{group__fm24}\index{ferroelectric random access memory driver@{ferroelectric random access memory driver}}
+
+
+driver for the fm24 series of FRAM memory chips.  
+
+
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structmem__mgmt__t}{mem\+\_\+mgmt\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__fm24_gaf22081c0a9cfac5021c00a4758fd45d8}\label{group__fm24_gaf22081c0a9cfac5021c00a4758fd45d8}} 
+\#define {\bfseries FM24\+\_\+\+RSVD}~0x\+F8
+\item 
+\mbox{\Hypertarget{group__fm24_ga9c1300587a88b9f4a0f3c455d4f2e929}\label{group__fm24_ga9c1300587a88b9f4a0f3c455d4f2e929}} 
+\#define {\bfseries FM24\+\_\+\+SLEEP}~0x86
+\item 
+\mbox{\Hypertarget{group__fm24_gae82d76ecf630de201bf0878f8f4e6b25}\label{group__fm24_gae82d76ecf630de201bf0878f8f4e6b25}} 
+\#define {\bfseries FM\+\_\+\+LA}~0x1\+FFFl
+\item 
+\mbox{\Hypertarget{group__fm24_ga48ff59bdede8a019f6fa78b23296ae6b}\label{group__fm24_ga48ff59bdede8a019f6fa78b23296ae6b}} 
+\#define {\bfseries MAX\+\_\+\+SEG}~9
+\item 
+\mbox{\Hypertarget{group__fm24_ga75614c84b3ce637eb8611c5f513f54f5}\label{group__fm24_ga75614c84b3ce637eb8611c5f513f54f5}} 
+\#define {\bfseries MAX\+\_\+\+SEG\+\_\+\+SIZE}~894
+\item 
+\mbox{\Hypertarget{group__fm24_ga5810190a294403d782a8186ce9eb3f43}\label{group__fm24_ga5810190a294403d782a8186ce9eb3f43}} 
+\#define {\bfseries FM24\+\_\+\+AWAKE}~0x1
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__fm24_ga95f01dcd24eddbac4925102a39cf527f}{FM24\+\_\+read}} (const uint16\+\_\+t usci\+\_\+base\+\_\+addr, const uint8\+\_\+t slave\+\_\+addr, uint8\+\_\+t $\ast$data, const uint32\+\_\+t addr, const uint32\+\_\+t data\+\_\+len)
+\begin{DoxyCompactList}\small\item\em start an multi-\/byte selective read \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group__fm24_gaf6e6c396d4f4e87bc88d062ed01d7f9c}{FM24\+\_\+write}} (const uint16\+\_\+t usci\+\_\+base\+\_\+addr, const uint8\+\_\+t slave\+\_\+addr, uint8\+\_\+t $\ast$data, const uint32\+\_\+t addr, const uint32\+\_\+t data\+\_\+len)
+\begin{DoxyCompactList}\small\item\em start an multi-\/byte write \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__fm24_ga5b14a3fb085c4838a6f4be977c2ad835}\label{group__fm24_ga5b14a3fb085c4838a6f4be977c2ad835}} 
+uint8\+\_\+t {\bfseries FM24\+\_\+sleep} (const uint16\+\_\+t usci\+\_\+base\+\_\+addr, const uint8\+\_\+t slave\+\_\+addr)
+\item 
+\mbox{\Hypertarget{group__fm24_ga1530109b877be73bbc20104d4a8de277}\label{group__fm24_ga1530109b877be73bbc20104d4a8de277}} 
+uint32\+\_\+t {\bfseries FM24\+\_\+data\+\_\+len} (const uint32\+\_\+t first, const uint32\+\_\+t last)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__fm24_ga06d1fb396df614ce436702516389ed47}\label{group__fm24_ga06d1fb396df614ce436702516389ed47}} 
+uint32\+\_\+t {\bfseries mem\+\_\+mgmt\+\_\+t\+::e}
+\item 
+\mbox{\Hypertarget{group__fm24_ga9d467a7a84e7369f5c44ee5078e62aaf}\label{group__fm24_ga9d467a7a84e7369f5c44ee5078e62aaf}} 
+uint32\+\_\+t {\bfseries mem\+\_\+mgmt\+\_\+t\+::seg} \mbox{[}MAX\+\_\+\+SEG+1\mbox{]}
+\item 
+\mbox{\Hypertarget{group__fm24_gae99efb7ee1a3b5cd30e5da2567ce66f0}\label{group__fm24_gae99efb7ee1a3b5cd30e5da2567ce66f0}} 
+uint8\+\_\+t {\bfseries mem\+\_\+mgmt\+\_\+t\+::seg\+\_\+num}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+driver for the fm24 series of FRAM memory chips. 
+
+\begin{DoxyAuthor}{Author}
+Petre Rodan 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__fm24_ga95f01dcd24eddbac4925102a39cf527f}\label{group__fm24_ga95f01dcd24eddbac4925102a39cf527f}} 
+\index{ferroelectric random access memory driver@{ferroelectric random access memory driver}!FM24\_read@{FM24\_read}}
+\index{FM24\_read@{FM24\_read}!ferroelectric random access memory driver@{ferroelectric random access memory driver}}
+\doxysubsubsection{\texorpdfstring{FM24\_read()}{FM24\_read()}}
+{\footnotesize\ttfamily uint32\+\_\+t FM24\+\_\+read (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t}]{usci\+\_\+base\+\_\+addr,  }\item[{const uint8\+\_\+t}]{slave\+\_\+addr,  }\item[{uint8\+\_\+t $\ast$}]{data,  }\item[{const uint32\+\_\+t}]{addr,  }\item[{const uint32\+\_\+t}]{data\+\_\+len }\end{DoxyParamCaption})}
+
+
+
+start an multi-\/byte selective read 
+
+this function begins a new I2C multi-\/byte selective read.
+
+
+\begin{DoxyParams}{Parameters}
+{\em usci\+\_\+base\+\_\+address} & MSP430-\/related register address of the USCI subsystem. can be USCI\+\_\+\+B0\+\_\+\+BASE -\/ USCI\+\_\+\+B1\+\_\+\+BASE, EUSCI\+\_\+\+B0\+\_\+\+BASE -\/ EUSCI\+\_\+\+B3\+\_\+\+BASE \\
+\hline
+{\em slave\+\_\+addrress} & chip i2c address \\
+\hline
+{\em data} & pointer to pre-\/allocated buffer where the read data is to be written. make sure it\textquotesingle{}s at least data\+\_\+len in lenght \\
+\hline
+{\em addr} & FM24 address where the read will start \\
+\hline
+{\em data\+\_\+len} & how many bytes to be read \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__fm24_gaf6e6c396d4f4e87bc88d062ed01d7f9c}\label{group__fm24_gaf6e6c396d4f4e87bc88d062ed01d7f9c}} 
+\index{ferroelectric random access memory driver@{ferroelectric random access memory driver}!FM24\_write@{FM24\_write}}
+\index{FM24\_write@{FM24\_write}!ferroelectric random access memory driver@{ferroelectric random access memory driver}}
+\doxysubsubsection{\texorpdfstring{FM24\_write()}{FM24\_write()}}
+{\footnotesize\ttfamily uint32\+\_\+t FM24\+\_\+write (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t}]{usci\+\_\+base\+\_\+addr,  }\item[{const uint8\+\_\+t}]{slave\+\_\+addr,  }\item[{uint8\+\_\+t $\ast$}]{data,  }\item[{const uint32\+\_\+t}]{addr,  }\item[{const uint32\+\_\+t}]{data\+\_\+len }\end{DoxyParamCaption})}
+
+
+
+start an multi-\/byte write 
+
+this function begins a new I2C multi-\/byte selective read.
+
+
+\begin{DoxyParams}{Parameters}
+{\em usci\+\_\+base\+\_\+address} & MSP430-\/related register address of the USCI subsystem. can be USCI\+\_\+\+B0\+\_\+\+BASE -\/ USCI\+\_\+\+B1\+\_\+\+BASE, EUSCI\+\_\+\+B0\+\_\+\+BASE -\/ EUSCI\+\_\+\+B3\+\_\+\+BASE \\
+\hline
+{\em slave\+\_\+addrress} & chip i2c address \\
+\hline
+{\em data} & pointer to buffer where the written data is provided \\
+\hline
+{\em addr} & FM24 address where the write will start \\
+\hline
+{\em data\+\_\+len} & how many bytes to be written \\
+\hline
+\end{DoxyParams}

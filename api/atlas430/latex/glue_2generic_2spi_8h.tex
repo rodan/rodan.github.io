@@ -1,0 +1,32 @@
+\hypertarget{glue_2generic_2spi_8h}{}\doxysection{glue/generic/spi.h File Reference}
+\label{glue_2generic_2spi_8h}\index{glue/generic/spi.h@{glue/generic/spi.h}}
+
+
+Include file for \mbox{\hyperlink{group__MOD__SPI}{SPI Bus}}.  
+
+
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct__spi__descriptor}{\+\_\+spi\+\_\+descriptor}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct__spi__descriptor}{\+\_\+spi\+\_\+descriptor}} \mbox{\hyperlink{group__MOD__SPI_ga3495a938aee225923b71614a09e22bc3}{spi\+\_\+descriptor}}
+\begin{DoxyCompactList}\small\item\em struct that needs to be populated before the library calls are made \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group__MOD__SPI_gaf5df60c95c1d0f93fbeadebf72e103eb}{spi\+\_\+read\+\_\+frame}} (const uint16\+\_\+t base\+Address, uint8\+\_\+t $\ast$buf, const uint16\+\_\+t count)
+\begin{DoxyCompactList}\small\item\em read count number of bytes from the SPI \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group__MOD__SPI_ga84cd5c16c7a51d6d690c9f6be5b31f68}{spi\+\_\+write\+\_\+frame}} (const uint16\+\_\+t base\+Address, uint8\+\_\+t $\ast$buf, const uint16\+\_\+t count)
+\begin{DoxyCompactList}\small\item\em write count number of bytes to the SPI \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Include file for \mbox{\hyperlink{group__MOD__SPI}{SPI Bus}}. 
+
+\begin{DoxyAuthor}{Author}
+Petre Rodan 
+\end{DoxyAuthor}

@@ -1,0 +1,525 @@
+\hypertarget{group__lib__convert}{}\doxysection{Data conversion library}
+\label{group__lib__convert}\index{Data conversion library@{Data conversion library}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__lib__convert_ga3bcc3694d2d4f788956ae6ef805e06c2}\label{group__lib__convert_ga3bcc3694d2d4f788956ae6ef805e06c2}} 
+\#define \mbox{\hyperlink{group__lib__convert_ga3bcc3694d2d4f788956ae6ef805e06c2}{CONV\+\_\+\+BASE\+\_\+2\+\_\+\+BUF\+\_\+\+SZ}}~19
+\begin{DoxyCompactList}\small\item\em buffer size needed for converting number into string in binary representation \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__lib__convert_gab629046f9aae397c8ea7f11bcb62d052}\label{group__lib__convert_gab629046f9aae397c8ea7f11bcb62d052}} 
+\#define \mbox{\hyperlink{group__lib__convert_gab629046f9aae397c8ea7f11bcb62d052}{CONV\+\_\+\+BASE\+\_\+10\+\_\+\+BUF\+\_\+\+SZ}}~12
+\begin{DoxyCompactList}\small\item\em buffer size needed for converting number into string in decimal representation (-\/2147483648 + ending 0 is 12 bytes long) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__lib__convert_gaa1153bf38b00bd00985c997d20c1a205}\label{group__lib__convert_gaa1153bf38b00bd00985c997d20c1a205}} 
+\#define \mbox{\hyperlink{group__lib__convert_gaa1153bf38b00bd00985c997d20c1a205}{CONV\+\_\+\+BASE\+\_\+16\+\_\+\+BUF\+\_\+\+SZ}}~12
+\begin{DoxyCompactList}\small\item\em buffer size needed for converting number into string in hexadecimal representation \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__lib__convert_ga73efe787c131b385070f25d18b7c9aa4}\label{group__lib__convert_ga73efe787c131b385070f25d18b7c9aa4}} 
+\#define \mbox{\hyperlink{group__lib__convert_ga73efe787c131b385070f25d18b7c9aa4}{EXIT\+\_\+\+FAILURE}}~1
+\begin{DoxyCompactList}\small\item\em define EXIT\+\_\+\+FAILURE just in case stdlib.\+h is not included \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__lib__convert_ga687984f47d8cce148d1b914d2b79612a}\label{group__lib__convert_ga687984f47d8cce148d1b914d2b79612a}} 
+\#define \mbox{\hyperlink{group__lib__convert_ga687984f47d8cce148d1b914d2b79612a}{EXIT\+\_\+\+SUCCESS}}~0
+\begin{DoxyCompactList}\small\item\em define EXIT\+\_\+\+FAILURE just in case stdlib.\+h is not included \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__lib__convert_gaf8b75c966f5e415f5d5de1e747f95153}{pad\+\_\+type}} \{ \mbox{\hyperlink{group__lib__convert_ggaf8b75c966f5e415f5d5de1e747f95153a972d1f0f1d4eaf1ad07c50201291ee32}{PAD\+\_\+\+NONE}}
+, \mbox{\hyperlink{group__lib__convert_ggaf8b75c966f5e415f5d5de1e747f95153a199dae95ae6473699f59f3073424b7fb}{PAD\+\_\+\+ZEROES}}
+, \mbox{\hyperlink{group__lib__convert_ggaf8b75c966f5e415f5d5de1e747f95153a48e9c5e224bb18f9b94e050242e63971}{PAD\+\_\+\+SPACES}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{group__lib__convert_ga6c01d288f859b1771998331b9dba1245}{\+\_\+utob}} (char $\ast$buf, const uint16\+\_\+t val)
+\item 
+char $\ast$ \mbox{\hyperlink{group__lib__convert_ga81afccff121c223980c115b034fdad84}{\+\_\+utoh}} (char $\ast$buf, const uint32\+\_\+t val)
+\item 
+char $\ast$ \mbox{\hyperlink{group__lib__convert_gab894ef0e8e2ce05585016fb2adb3e124}{\+\_\+utoh8}} (char $\ast$buf, const uint32\+\_\+t val)
+\item 
+char $\ast$ \mbox{\hyperlink{group__lib__convert_gac996b3ed7bc3ff4d7dc1abc4f072abd8}{\+\_\+utoh16}} (char $\ast$buf, const uint32\+\_\+t val)
+\item 
+char $\ast$ \mbox{\hyperlink{group__lib__convert_ga22656122b5ed7ee1bae7e746e159c9df}{\+\_\+utoh32}} (char $\ast$buf, const uint32\+\_\+t val)
+\item 
+char $\ast$ \mbox{\hyperlink{group__lib__convert_gabbd688e17129b99f503dba4fe17ed876}{\+\_\+utorh}} (char $\ast$buf, const uint32\+\_\+t val, const uint8\+\_\+t pad\+\_\+size)
+\item 
+char $\ast$ \mbox{\hyperlink{group__lib__convert_ga043d6584b9fccf61d2b19045ddf5a903}{\+\_\+utoa}} (char $\ast$buf, const uint32\+\_\+t val)
+\item 
+char $\ast$ \mbox{\hyperlink{group__lib__convert_gaf2a2c41ce9d07c74eb2d2ad33e12d250}{\+\_\+itoa}} (char $\ast$buf, const int32\+\_\+t val)
+\item 
+char $\ast$ \mbox{\hyperlink{group__lib__convert_ga94a54b29643a93d85657bdfdb262e41b}{\+\_\+i16toa}} (char $\ast$buf, const int16\+\_\+t val)
+\item 
+char $\ast$ \mbox{\hyperlink{group__lib__convert_gaaa2d12bc285dbd31cba57db8380564e2}{prepend\+\_\+padding}} (char $\ast$buf, char $\ast$converted\+\_\+buf, const \mbox{\hyperlink{group__lib__convert_gaf8b75c966f5e415f5d5de1e747f95153}{pad\+\_\+type}} padding\+\_\+type, const uint8\+\_\+t target\+\_\+len)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group__lib__convert_ga96fbbde920e113e10c1bc24f9d16a916}{str\+\_\+to\+\_\+uint8}} (char $\ast$str, uint8\+\_\+t $\ast$out, const uint8\+\_\+t seek, const uint8\+\_\+t len, const uint8\+\_\+t min, const uint8\+\_\+t max)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group__lib__convert_ga2c3981742703d6bb1a310e7521689cac}{str\+\_\+to\+\_\+uint16}} (char $\ast$str, uint16\+\_\+t $\ast$out, const uint8\+\_\+t seek, const uint8\+\_\+t len, const uint16\+\_\+t min, const uint16\+\_\+t max)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group__lib__convert_ga6f034e26f1ca7841189346743d8d84ca}{str\+\_\+to\+\_\+uint32}} (char $\ast$str, uint32\+\_\+t $\ast$out, const uint8\+\_\+t seek, const uint8\+\_\+t len, const uint32\+\_\+t min, const uint32\+\_\+t max)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group__lib__convert_ga0bd003da494831d5cabeaf2bf22334ea}{str\+\_\+to\+\_\+int32}} (char $\ast$str, int32\+\_\+t $\ast$out, const uint8\+\_\+t seek, const uint8\+\_\+t len, const int32\+\_\+t min, const int32\+\_\+t max)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group__lib__convert_gaf57fc2890e0bf75e60d6444e3ed404c7}{hstr\+\_\+to\+\_\+uint8}} (char $\ast$str, uint8\+\_\+t $\ast$out, const uint8\+\_\+t seek, const uint8\+\_\+t len, const uint8\+\_\+t min, const uint16\+\_\+t max)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group__lib__convert_ga440a3ac2d8c63ae23c5871b32820f020}{hstr\+\_\+to\+\_\+uint16}} (char $\ast$str, uint16\+\_\+t $\ast$out, const uint8\+\_\+t seek, const uint8\+\_\+t len, const uint16\+\_\+t min, const uint16\+\_\+t max)
+\item 
+void \mbox{\hyperlink{group__lib__convert_gac9d55b90e6812a77fef501aaba870e2a}{mem2ascii}} (uint8\+\_\+t $\ast$data\+\_\+in, uint8\+\_\+t $\ast$data\+\_\+out, uint8\+\_\+t len)
+\item 
+void \mbox{\hyperlink{group__lib__convert_ga5d74d7969c0a5515d2ce589840ae60b5}{ascii2mem}} (uint8\+\_\+t $\ast$data\+\_\+in, uint8\+\_\+t $\ast$data\+\_\+out, uint8\+\_\+t len)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group__lib__convert_gabdd48d30ab32c0c1d5ffdcdb7043ef81}{dec\+\_\+to\+\_\+bcd}} (const uint8\+\_\+t val)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group__lib__convert_ga2ac3f33f6d518519cb6d9c622e24136a}{bcd\+\_\+to\+\_\+dec}} (const uint8\+\_\+t val)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__lib__convert_gaf47a47717162ea9adb1caaf15a12a2d9}{\+\_\+wiretou32}} (char $\ast$buf, const uint16\+\_\+t seek, const uint16\+\_\+t len)
+\item 
+uint16\+\_\+t \mbox{\hyperlink{group__lib__convert_ga957b188f6047d6a97579ac739886c1c0}{\+\_\+flip\+\_\+u16}} (const uint16\+\_\+t val)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__lib__convert_ga3433a396a52456daf52933ccc76bf82b}{\+\_\+flip\+\_\+u32}} (const uint32\+\_\+t val)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+simple functions for converting data between different formats
+
+to be used when the libc implementation takes too much space 
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group__lib__convert_gaf8b75c966f5e415f5d5de1e747f95153}\label{group__lib__convert_gaf8b75c966f5e415f5d5de1e747f95153}} 
+\index{Data conversion library@{Data conversion library}!pad\_type@{pad\_type}}
+\index{pad\_type@{pad\_type}!Data conversion library@{Data conversion library}}
+\doxysubsubsection{\texorpdfstring{pad\_type}{pad\_type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__lib__convert_gaf8b75c966f5e415f5d5de1e747f95153}{pad\+\_\+type}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PAD\_NONE@{PAD\_NONE}!Data conversion library@{Data conversion library}}\index{Data conversion library@{Data conversion library}!PAD\_NONE@{PAD\_NONE}}}\mbox{\Hypertarget{group__lib__convert_ggaf8b75c966f5e415f5d5de1e747f95153a972d1f0f1d4eaf1ad07c50201291ee32}\label{group__lib__convert_ggaf8b75c966f5e415f5d5de1e747f95153a972d1f0f1d4eaf1ad07c50201291ee32}} 
+PAD\+\_\+\+NONE&no padding \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PAD\_ZEROES@{PAD\_ZEROES}!Data conversion library@{Data conversion library}}\index{Data conversion library@{Data conversion library}!PAD\_ZEROES@{PAD\_ZEROES}}}\mbox{\Hypertarget{group__lib__convert_ggaf8b75c966f5e415f5d5de1e747f95153a199dae95ae6473699f59f3073424b7fb}\label{group__lib__convert_ggaf8b75c966f5e415f5d5de1e747f95153a199dae95ae6473699f59f3073424b7fb}} 
+PAD\+\_\+\+ZEROES&pad with zeroes \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PAD\_SPACES@{PAD\_SPACES}!Data conversion library@{Data conversion library}}\index{Data conversion library@{Data conversion library}!PAD\_SPACES@{PAD\_SPACES}}}\mbox{\Hypertarget{group__lib__convert_ggaf8b75c966f5e415f5d5de1e747f95153a48e9c5e224bb18f9b94e050242e63971}\label{group__lib__convert_ggaf8b75c966f5e415f5d5de1e747f95153a48e9c5e224bb18f9b94e050242e63971}} 
+PAD\+\_\+\+SPACES&pad with spaces \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__lib__convert_ga957b188f6047d6a97579ac739886c1c0}\label{group__lib__convert_ga957b188f6047d6a97579ac739886c1c0}} 
+\index{Data conversion library@{Data conversion library}!\_flip\_u16@{\_flip\_u16}}
+\index{\_flip\_u16@{\_flip\_u16}!Data conversion library@{Data conversion library}}
+\doxysubsubsection{\texorpdfstring{\_flip\_u16()}{\_flip\_u16()}}
+{\footnotesize\ttfamily uint16\+\_\+t \+\_\+flip\+\_\+u16 (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t}]{val }\end{DoxyParamCaption})}
+
+flip bytes in a two byte WORD 0xaabb -\/$>$ 0xbbaa 
+\begin{DoxyParams}{Parameters}
+{\em val} & input \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+flipped result 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__lib__convert_ga3433a396a52456daf52933ccc76bf82b}\label{group__lib__convert_ga3433a396a52456daf52933ccc76bf82b}} 
+\index{Data conversion library@{Data conversion library}!\_flip\_u32@{\_flip\_u32}}
+\index{\_flip\_u32@{\_flip\_u32}!Data conversion library@{Data conversion library}}
+\doxysubsubsection{\texorpdfstring{\_flip\_u32()}{\_flip\_u32()}}
+{\footnotesize\ttfamily uint32\+\_\+t \+\_\+flip\+\_\+u32 (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t}]{val }\end{DoxyParamCaption})}
+
+flip bytes in a four byte DWORD 0xaabbccdd -\/$>$ 0xddccbbaa 
+\begin{DoxyParams}{Parameters}
+{\em val} & input \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+flipped result 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__lib__convert_ga94a54b29643a93d85657bdfdb262e41b}\label{group__lib__convert_ga94a54b29643a93d85657bdfdb262e41b}} 
+\index{Data conversion library@{Data conversion library}!\_i16toa@{\_i16toa}}
+\index{\_i16toa@{\_i16toa}!Data conversion library@{Data conversion library}}
+\doxysubsubsection{\texorpdfstring{\_i16toa()}{\_i16toa()}}
+{\footnotesize\ttfamily char$\ast$ \+\_\+i16toa (\begin{DoxyParamCaption}\item[{char $\ast$}]{buf,  }\item[{const int16\+\_\+t}]{val }\end{DoxyParamCaption})}
+
+return a decimal string for an int16\+\_\+t integer 
+\begin{DoxyParams}{Parameters}
+{\em buf} & temporary buffer used to build up the string. buf\mbox{[}CONV\+\_\+\+BASE\+\_\+10\+\_\+\+BUF\+\_\+\+SZ\mbox{]} needs to be pre-\/allocated \\
+\hline
+{\em val} & int32\+\_\+t value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to the string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__lib__convert_gaf2a2c41ce9d07c74eb2d2ad33e12d250}\label{group__lib__convert_gaf2a2c41ce9d07c74eb2d2ad33e12d250}} 
+\index{Data conversion library@{Data conversion library}!\_itoa@{\_itoa}}
+\index{\_itoa@{\_itoa}!Data conversion library@{Data conversion library}}
+\doxysubsubsection{\texorpdfstring{\_itoa()}{\_itoa()}}
+{\footnotesize\ttfamily char$\ast$ \+\_\+itoa (\begin{DoxyParamCaption}\item[{char $\ast$}]{buf,  }\item[{const int32\+\_\+t}]{val }\end{DoxyParamCaption})}
+
+return a decimal string for an int32\+\_\+t integer 
+\begin{DoxyParams}{Parameters}
+{\em buf} & temporary buffer used to build up the string. buf\mbox{[}CONV\+\_\+\+BASE\+\_\+10\+\_\+\+BUF\+\_\+\+SZ\mbox{]} needs to be pre-\/allocated \\
+\hline
+{\em val} & int32\+\_\+t value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to the string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__lib__convert_ga043d6584b9fccf61d2b19045ddf5a903}\label{group__lib__convert_ga043d6584b9fccf61d2b19045ddf5a903}} 
+\index{Data conversion library@{Data conversion library}!\_utoa@{\_utoa}}
+\index{\_utoa@{\_utoa}!Data conversion library@{Data conversion library}}
+\doxysubsubsection{\texorpdfstring{\_utoa()}{\_utoa()}}
+{\footnotesize\ttfamily char$\ast$ \+\_\+utoa (\begin{DoxyParamCaption}\item[{char $\ast$}]{buf,  }\item[{const uint32\+\_\+t}]{val }\end{DoxyParamCaption})}
+
+return a decimal string for an uint32\+\_\+t integer 
+\begin{DoxyParams}{Parameters}
+{\em buf} & temporary buffer used to build up the string. buf\mbox{[}CONV\+\_\+\+BASE\+\_\+10\+\_\+\+BUF\+\_\+\+SZ\mbox{]} needs to be pre-\/allocated \\
+\hline
+{\em val} & uint32\+\_\+t value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to the string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__lib__convert_ga6c01d288f859b1771998331b9dba1245}\label{group__lib__convert_ga6c01d288f859b1771998331b9dba1245}} 
+\index{Data conversion library@{Data conversion library}!\_utob@{\_utob}}
+\index{\_utob@{\_utob}!Data conversion library@{Data conversion library}}
+\doxysubsubsection{\texorpdfstring{\_utob()}{\_utob()}}
+{\footnotesize\ttfamily char$\ast$ \+\_\+utob (\begin{DoxyParamCaption}\item[{char $\ast$}]{buf,  }\item[{const uint16\+\_\+t}]{val }\end{DoxyParamCaption})}
+
+return a binary string for an uint16\+\_\+t integer 
+\begin{DoxyParams}{Parameters}
+{\em buf} & temporary buffer used to build up the string. buf\mbox{[}CONV\+\_\+\+BASE\+\_\+2\+\_\+\+BUF\+\_\+\+SZ\mbox{]} needs to be pre-\/allocated \\
+\hline
+{\em val} & uint16\+\_\+t value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to the string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__lib__convert_ga81afccff121c223980c115b034fdad84}\label{group__lib__convert_ga81afccff121c223980c115b034fdad84}} 
+\index{Data conversion library@{Data conversion library}!\_utoh@{\_utoh}}
+\index{\_utoh@{\_utoh}!Data conversion library@{Data conversion library}}
+\doxysubsubsection{\texorpdfstring{\_utoh()}{\_utoh()}}
+{\footnotesize\ttfamily char$\ast$ \+\_\+utoh (\begin{DoxyParamCaption}\item[{char $\ast$}]{buf,  }\item[{const uint32\+\_\+t}]{val }\end{DoxyParamCaption})}
+
+return a hex string for an uint32\+\_\+t integer 
+\begin{DoxyParams}{Parameters}
+{\em buf} & temporary buffer used to build up the string. buf\mbox{[}CONV\+\_\+\+BASE\+\_\+16\+\_\+\+BUF\+\_\+\+SZ\mbox{]} needs to be pre-\/allocated \\
+\hline
+{\em val} & uint32\+\_\+t value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to the string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__lib__convert_gac996b3ed7bc3ff4d7dc1abc4f072abd8}\label{group__lib__convert_gac996b3ed7bc3ff4d7dc1abc4f072abd8}} 
+\index{Data conversion library@{Data conversion library}!\_utoh16@{\_utoh16}}
+\index{\_utoh16@{\_utoh16}!Data conversion library@{Data conversion library}}
+\doxysubsubsection{\texorpdfstring{\_utoh16()}{\_utoh16()}}
+{\footnotesize\ttfamily char$\ast$ \+\_\+utoh16 (\begin{DoxyParamCaption}\item[{char $\ast$}]{buf,  }\item[{const uint32\+\_\+t}]{val }\end{DoxyParamCaption})}
+
+return a hex string for an uint16\+\_\+t integer 
+\begin{DoxyParams}{Parameters}
+{\em buf} & temporary buffer used to build up the string. buf\mbox{[}CONV\+\_\+\+BASE\+\_\+16\+\_\+\+BUF\+\_\+\+SZ\mbox{]} needs to be pre-\/allocated \\
+\hline
+{\em val} & uint32\+\_\+t value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to the string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__lib__convert_ga22656122b5ed7ee1bae7e746e159c9df}\label{group__lib__convert_ga22656122b5ed7ee1bae7e746e159c9df}} 
+\index{Data conversion library@{Data conversion library}!\_utoh32@{\_utoh32}}
+\index{\_utoh32@{\_utoh32}!Data conversion library@{Data conversion library}}
+\doxysubsubsection{\texorpdfstring{\_utoh32()}{\_utoh32()}}
+{\footnotesize\ttfamily char$\ast$ \+\_\+utoh32 (\begin{DoxyParamCaption}\item[{char $\ast$}]{buf,  }\item[{const uint32\+\_\+t}]{val }\end{DoxyParamCaption})}
+
+return a hex string for an uint32\+\_\+t integer 
+\begin{DoxyParams}{Parameters}
+{\em buf} & temporary buffer used to build up the string. buf\mbox{[}CONV\+\_\+\+BASE\+\_\+16\+\_\+\+BUF\+\_\+\+SZ\mbox{]} needs to be pre-\/allocated \\
+\hline
+{\em val} & uint32\+\_\+t value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to the string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__lib__convert_gab894ef0e8e2ce05585016fb2adb3e124}\label{group__lib__convert_gab894ef0e8e2ce05585016fb2adb3e124}} 
+\index{Data conversion library@{Data conversion library}!\_utoh8@{\_utoh8}}
+\index{\_utoh8@{\_utoh8}!Data conversion library@{Data conversion library}}
+\doxysubsubsection{\texorpdfstring{\_utoh8()}{\_utoh8()}}
+{\footnotesize\ttfamily char$\ast$ \+\_\+utoh8 (\begin{DoxyParamCaption}\item[{char $\ast$}]{buf,  }\item[{const uint32\+\_\+t}]{val }\end{DoxyParamCaption})}
+
+return a hex string for an uint8\+\_\+t integer 
+\begin{DoxyParams}{Parameters}
+{\em buf} & temporary buffer used to build up the string. buf\mbox{[}CONV\+\_\+\+BASE\+\_\+16\+\_\+\+BUF\+\_\+\+SZ\mbox{]} needs to be pre-\/allocated \\
+\hline
+{\em val} & uint32\+\_\+t value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to the string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__lib__convert_gabbd688e17129b99f503dba4fe17ed876}\label{group__lib__convert_gabbd688e17129b99f503dba4fe17ed876}} 
+\index{Data conversion library@{Data conversion library}!\_utorh@{\_utorh}}
+\index{\_utorh@{\_utorh}!Data conversion library@{Data conversion library}}
+\doxysubsubsection{\texorpdfstring{\_utorh()}{\_utorh()}}
+{\footnotesize\ttfamily char$\ast$ \+\_\+utorh (\begin{DoxyParamCaption}\item[{char $\ast$}]{buf,  }\item[{const uint32\+\_\+t}]{val,  }\item[{const uint8\+\_\+t}]{pad\+\_\+size }\end{DoxyParamCaption})}
+
+return a padded hex string for an uint32\+\_\+t integer 
+\begin{DoxyParams}{Parameters}
+{\em buf} & temporary buffer used to build up the string. buf\mbox{[}CONV\+\_\+\+BASE\+\_\+16\+\_\+\+BUF\+\_\+\+SZ\mbox{]} needs to be pre-\/allocated \\
+\hline
+{\em val} & uint32\+\_\+t value \\
+\hline
+{\em pad\+\_\+size} & padding size \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to the string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__lib__convert_gaf47a47717162ea9adb1caaf15a12a2d9}\label{group__lib__convert_gaf47a47717162ea9adb1caaf15a12a2d9}} 
+\index{Data conversion library@{Data conversion library}!\_wiretou32@{\_wiretou32}}
+\index{\_wiretou32@{\_wiretou32}!Data conversion library@{Data conversion library}}
+\doxysubsubsection{\texorpdfstring{\_wiretou32()}{\_wiretou32()}}
+{\footnotesize\ttfamily uint32\+\_\+t \+\_\+wiretou32 (\begin{DoxyParamCaption}\item[{char $\ast$}]{buf,  }\item[{const uint16\+\_\+t}]{seek,  }\item[{const uint16\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+convert hex-\/ascii string into little endian uint32\+\_\+t 0x31 0x34 -\/$>$ 0x14 
+\begin{DoxyParams}{Parameters}
+{\em buf} & input \\
+\hline
+{\em seek} & skip these many characters \\
+\hline
+{\em len} & keep converting these many chars \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+little endian uint32\+\_\+t representation 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__lib__convert_ga5d74d7969c0a5515d2ce589840ae60b5}\label{group__lib__convert_ga5d74d7969c0a5515d2ce589840ae60b5}} 
+\index{Data conversion library@{Data conversion library}!ascii2mem@{ascii2mem}}
+\index{ascii2mem@{ascii2mem}!Data conversion library@{Data conversion library}}
+\doxysubsubsection{\texorpdfstring{ascii2mem()}{ascii2mem()}}
+{\footnotesize\ttfamily void ascii2mem (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{data\+\_\+in,  }\item[{uint8\+\_\+t $\ast$}]{data\+\_\+out,  }\item[{uint8\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+convert an ascii string (ex 0x31 0x34 -\/$>$ 0x14) 
+\begin{DoxyParams}{Parameters}
+{\em data\+\_\+in} & input mem structure \\
+\hline
+{\em data\+\_\+out} & ascii output \\
+\hline
+{\em len} & in-\/mem length \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__lib__convert_ga2ac3f33f6d518519cb6d9c622e24136a}\label{group__lib__convert_ga2ac3f33f6d518519cb6d9c622e24136a}} 
+\index{Data conversion library@{Data conversion library}!bcd\_to\_dec@{bcd\_to\_dec}}
+\index{bcd\_to\_dec@{bcd\_to\_dec}!Data conversion library@{Data conversion library}}
+\doxysubsubsection{\texorpdfstring{bcd\_to\_dec()}{bcd\_to\_dec()}}
+{\footnotesize\ttfamily uint8\+\_\+t bcd\+\_\+to\+\_\+dec (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t}]{val }\end{DoxyParamCaption})}
+
+convert a binary-\/coded decimal (BCD) to a base-\/10 integer value 
+\begin{DoxyParams}{Parameters}
+{\em val} & BCD integer to be converted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+input decimal value to be converted 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__lib__convert_gabdd48d30ab32c0c1d5ffdcdb7043ef81}\label{group__lib__convert_gabdd48d30ab32c0c1d5ffdcdb7043ef81}} 
+\index{Data conversion library@{Data conversion library}!dec\_to\_bcd@{dec\_to\_bcd}}
+\index{dec\_to\_bcd@{dec\_to\_bcd}!Data conversion library@{Data conversion library}}
+\doxysubsubsection{\texorpdfstring{dec\_to\_bcd()}{dec\_to\_bcd()}}
+{\footnotesize\ttfamily uint8\+\_\+t dec\+\_\+to\+\_\+bcd (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t}]{val }\end{DoxyParamCaption})}
+
+convert a base-\/10 integer value to a binary-\/coded decimal (BCD) 
+\begin{DoxyParams}{Parameters}
+{\em val} & input decimal value to be converted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+BCD conversion 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__lib__convert_ga440a3ac2d8c63ae23c5871b32820f020}\label{group__lib__convert_ga440a3ac2d8c63ae23c5871b32820f020}} 
+\index{Data conversion library@{Data conversion library}!hstr\_to\_uint16@{hstr\_to\_uint16}}
+\index{hstr\_to\_uint16@{hstr\_to\_uint16}!Data conversion library@{Data conversion library}}
+\doxysubsubsection{\texorpdfstring{hstr\_to\_uint16()}{hstr\_to\_uint16()}}
+{\footnotesize\ttfamily uint8\+\_\+t hstr\+\_\+to\+\_\+uint16 (\begin{DoxyParamCaption}\item[{char $\ast$}]{str,  }\item[{uint16\+\_\+t $\ast$}]{out,  }\item[{const uint8\+\_\+t}]{seek,  }\item[{const uint8\+\_\+t}]{len,  }\item[{const uint16\+\_\+t}]{min,  }\item[{const uint16\+\_\+t}]{max }\end{DoxyParamCaption})}
+
+convert a hex string to a 16bit unsigned integer 
+\begin{DoxyParams}{Parameters}
+{\em str} & pointer to string to be converted \\
+\hline
+{\em out} & pointer to resulting uint16\+\_\+t value \mbox{[}min .. max\mbox{]} \\
+\hline
+{\em seek} & how many chars to skip \mbox{[}0 .. len-\/1\mbox{]} \\
+\hline
+{\em len} & length of string to parse \\
+\hline
+{\em min} & minimal value for result \\
+\hline
+{\em max} & maximum value for result \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+EXIT\+\_\+\+FAILURE if resulting value is outside the limits, EXIT\+\_\+\+SUCCESS otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__lib__convert_gaf57fc2890e0bf75e60d6444e3ed404c7}\label{group__lib__convert_gaf57fc2890e0bf75e60d6444e3ed404c7}} 
+\index{Data conversion library@{Data conversion library}!hstr\_to\_uint8@{hstr\_to\_uint8}}
+\index{hstr\_to\_uint8@{hstr\_to\_uint8}!Data conversion library@{Data conversion library}}
+\doxysubsubsection{\texorpdfstring{hstr\_to\_uint8()}{hstr\_to\_uint8()}}
+{\footnotesize\ttfamily uint8\+\_\+t hstr\+\_\+to\+\_\+uint8 (\begin{DoxyParamCaption}\item[{char $\ast$}]{str,  }\item[{uint8\+\_\+t $\ast$}]{out,  }\item[{const uint8\+\_\+t}]{seek,  }\item[{const uint8\+\_\+t}]{len,  }\item[{const uint8\+\_\+t}]{min,  }\item[{const uint16\+\_\+t}]{max }\end{DoxyParamCaption})}
+
+convert a hex string to a 8bit unsigned integer 
+\begin{DoxyParams}{Parameters}
+{\em str} & pointer to string to be converted \\
+\hline
+{\em out} & pointer to resulting uint8\+\_\+t value \mbox{[}min .. max\mbox{]} \\
+\hline
+{\em seek} & how many chars to skip \mbox{[}0 .. len-\/1\mbox{]} \\
+\hline
+{\em len} & length of string to parse \\
+\hline
+{\em min} & minimal value for result \\
+\hline
+{\em max} & maximum value for result \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+EXIT\+\_\+\+FAILURE if resulting value is outside the limits, EXIT\+\_\+\+SUCCESS otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__lib__convert_gac9d55b90e6812a77fef501aaba870e2a}\label{group__lib__convert_gac9d55b90e6812a77fef501aaba870e2a}} 
+\index{Data conversion library@{Data conversion library}!mem2ascii@{mem2ascii}}
+\index{mem2ascii@{mem2ascii}!Data conversion library@{Data conversion library}}
+\doxysubsubsection{\texorpdfstring{mem2ascii()}{mem2ascii()}}
+{\footnotesize\ttfamily void mem2ascii (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{data\+\_\+in,  }\item[{uint8\+\_\+t $\ast$}]{data\+\_\+out,  }\item[{uint8\+\_\+t}]{len }\end{DoxyParamCaption})}
+
+convert in-\/memory structure to an ascii string (ex 0x14 -\/$>$ 0x31 0x34) 
+\begin{DoxyParams}{Parameters}
+{\em data\+\_\+in} & input mem structure \\
+\hline
+{\em data\+\_\+out} & ascii output \\
+\hline
+{\em len} & in-\/mem length \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__lib__convert_gaaa2d12bc285dbd31cba57db8380564e2}\label{group__lib__convert_gaaa2d12bc285dbd31cba57db8380564e2}} 
+\index{Data conversion library@{Data conversion library}!prepend\_padding@{prepend\_padding}}
+\index{prepend\_padding@{prepend\_padding}!Data conversion library@{Data conversion library}}
+\doxysubsubsection{\texorpdfstring{prepend\_padding()}{prepend\_padding()}}
+{\footnotesize\ttfamily char$\ast$ prepend\+\_\+padding (\begin{DoxyParamCaption}\item[{char $\ast$}]{buf,  }\item[{char $\ast$}]{converted\+\_\+buf,  }\item[{const \mbox{\hyperlink{group__lib__convert_gaf8b75c966f5e415f5d5de1e747f95153}{pad\+\_\+type}}}]{padding\+\_\+type,  }\item[{const uint8\+\_\+t}]{target\+\_\+len }\end{DoxyParamCaption})}
+
+return a string with prefixed padding 
+\begin{DoxyParams}{Parameters}
+{\em buf} & pointer to originally allocated buffer \\
+\hline
+{\em converted\+\_\+buf} & pointer within the originally allocated buffer where the conversion is stored \\
+\hline
+{\em padding\+\_\+type} & type of padding \\
+\hline
+{\em target\+\_\+len} & target total length of resulting string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to the resulting string. $\ast$converted\+\_\+buf is returned on parameter error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__lib__convert_ga0bd003da494831d5cabeaf2bf22334ea}\label{group__lib__convert_ga0bd003da494831d5cabeaf2bf22334ea}} 
+\index{Data conversion library@{Data conversion library}!str\_to\_int32@{str\_to\_int32}}
+\index{str\_to\_int32@{str\_to\_int32}!Data conversion library@{Data conversion library}}
+\doxysubsubsection{\texorpdfstring{str\_to\_int32()}{str\_to\_int32()}}
+{\footnotesize\ttfamily uint8\+\_\+t str\+\_\+to\+\_\+int32 (\begin{DoxyParamCaption}\item[{char $\ast$}]{str,  }\item[{int32\+\_\+t $\ast$}]{out,  }\item[{const uint8\+\_\+t}]{seek,  }\item[{const uint8\+\_\+t}]{len,  }\item[{const int32\+\_\+t}]{min,  }\item[{const int32\+\_\+t}]{max }\end{DoxyParamCaption})}
+
+convert a string to a 32bit signed integer 
+\begin{DoxyParams}{Parameters}
+{\em str} & pointer to string to be converted \\
+\hline
+{\em out} & pointer to resulting int32\+\_\+t value \mbox{[}min .. max\mbox{]} \\
+\hline
+{\em seek} & how many chars to skip \mbox{[}0 .. len-\/1\mbox{]} \\
+\hline
+{\em len} & length of string to parse \\
+\hline
+{\em min} & minimal value for result \\
+\hline
+{\em max} & maximum value for result \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+EXIT\+\_\+\+FAILURE if resulting value is outside the limits, EXIT\+\_\+\+SUCCESS otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__lib__convert_ga2c3981742703d6bb1a310e7521689cac}\label{group__lib__convert_ga2c3981742703d6bb1a310e7521689cac}} 
+\index{Data conversion library@{Data conversion library}!str\_to\_uint16@{str\_to\_uint16}}
+\index{str\_to\_uint16@{str\_to\_uint16}!Data conversion library@{Data conversion library}}
+\doxysubsubsection{\texorpdfstring{str\_to\_uint16()}{str\_to\_uint16()}}
+{\footnotesize\ttfamily uint8\+\_\+t str\+\_\+to\+\_\+uint16 (\begin{DoxyParamCaption}\item[{char $\ast$}]{str,  }\item[{uint16\+\_\+t $\ast$}]{out,  }\item[{const uint8\+\_\+t}]{seek,  }\item[{const uint8\+\_\+t}]{len,  }\item[{const uint16\+\_\+t}]{min,  }\item[{const uint16\+\_\+t}]{max }\end{DoxyParamCaption})}
+
+convert a string to a 16bit unsigned integer 
+\begin{DoxyParams}{Parameters}
+{\em str} & pointer to string to be converted \\
+\hline
+{\em out} & pointer to resulting uint16\+\_\+t value \mbox{[}min .. max\mbox{]} \\
+\hline
+{\em seek} & how many chars to skip \mbox{[}0 .. len-\/1\mbox{]} \\
+\hline
+{\em len} & length of string to parse \\
+\hline
+{\em min} & minimal value for result \\
+\hline
+{\em max} & maximum value for result \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+EXIT\+\_\+\+FAILURE if resulting value is outside the limits, EXIT\+\_\+\+SUCCESS otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__lib__convert_ga6f034e26f1ca7841189346743d8d84ca}\label{group__lib__convert_ga6f034e26f1ca7841189346743d8d84ca}} 
+\index{Data conversion library@{Data conversion library}!str\_to\_uint32@{str\_to\_uint32}}
+\index{str\_to\_uint32@{str\_to\_uint32}!Data conversion library@{Data conversion library}}
+\doxysubsubsection{\texorpdfstring{str\_to\_uint32()}{str\_to\_uint32()}}
+{\footnotesize\ttfamily uint8\+\_\+t str\+\_\+to\+\_\+uint32 (\begin{DoxyParamCaption}\item[{char $\ast$}]{str,  }\item[{uint32\+\_\+t $\ast$}]{out,  }\item[{const uint8\+\_\+t}]{seek,  }\item[{const uint8\+\_\+t}]{len,  }\item[{const uint32\+\_\+t}]{min,  }\item[{const uint32\+\_\+t}]{max }\end{DoxyParamCaption})}
+
+convert a string to a 32bit unsigned integer 
+\begin{DoxyParams}{Parameters}
+{\em str} & pointer to string to be converted \\
+\hline
+{\em out} & pointer to resulting uint32\+\_\+t value \mbox{[}min .. max\mbox{]} \\
+\hline
+{\em seek} & how many chars to skip \mbox{[}0 .. len-\/1\mbox{]} \\
+\hline
+{\em len} & length of string to parse \\
+\hline
+{\em min} & minimal value for result \\
+\hline
+{\em max} & maximum value for result \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+EXIT\+\_\+\+FAILURE if resulting value is outside the limits, EXIT\+\_\+\+SUCCESS otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__lib__convert_ga96fbbde920e113e10c1bc24f9d16a916}\label{group__lib__convert_ga96fbbde920e113e10c1bc24f9d16a916}} 
+\index{Data conversion library@{Data conversion library}!str\_to\_uint8@{str\_to\_uint8}}
+\index{str\_to\_uint8@{str\_to\_uint8}!Data conversion library@{Data conversion library}}
+\doxysubsubsection{\texorpdfstring{str\_to\_uint8()}{str\_to\_uint8()}}
+{\footnotesize\ttfamily uint8\+\_\+t str\+\_\+to\+\_\+uint8 (\begin{DoxyParamCaption}\item[{char $\ast$}]{str,  }\item[{uint8\+\_\+t $\ast$}]{out,  }\item[{const uint8\+\_\+t}]{seek,  }\item[{const uint8\+\_\+t}]{len,  }\item[{const uint8\+\_\+t}]{min,  }\item[{const uint8\+\_\+t}]{max }\end{DoxyParamCaption})}
+
+convert a string to a 16bit unsigned integer 
+\begin{DoxyParams}{Parameters}
+{\em str} & pointer to string to be converted \\
+\hline
+{\em out} & pointer to resulting uint16\+\_\+t value \mbox{[}min .. max\mbox{]} \\
+\hline
+{\em seek} & how many chars to skip \mbox{[}0 .. len-\/1\mbox{]} \\
+\hline
+{\em len} & length of string to parse \\
+\hline
+{\em min} & minimal value for result \\
+\hline
+{\em max} & maximum value for result \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+EXIT\+\_\+\+FAILURE if resulting value is outside the limits, EXIT\+\_\+\+SUCCESS otherwise 
+\end{DoxyReturn}

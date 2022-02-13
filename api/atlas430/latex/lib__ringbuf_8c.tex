@@ -1,0 +1,38 @@
+\hypertarget{lib__ringbuf_8c}{}\doxysection{glue/generic/lib\+\_\+ringbuf.c File Reference}
+\label{lib__ringbuf_8c}\index{glue/generic/lib\_ringbuf.c@{glue/generic/lib\_ringbuf.c}}
+{\ttfamily \#include $<$inttypes.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}lib\+\_\+ringbuf.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{lib__ringbuf_8c_ab07d9588142cc3cbc42ca5d3e4dd4f60}{CC\+\_\+\+ACCESS\+\_\+\+NOW}}(type,  variable)~($\ast$(volatile type $\ast$)\&(variable))
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__ringbuf_ga92e83d886845e9a8a012cf162ab26e4c}{ringbuf\+\_\+init}} (struct \mbox{\hyperlink{structringbuf}{ringbuf}} $\ast$r, uint8\+\_\+t $\ast$dataptr, uint16\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Initialize a ring buffer. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group__ringbuf_gaa13a963fb591bc52c6bb4b6a7886576f}{ringbuf\+\_\+put}} (struct \mbox{\hyperlink{structringbuf}{ringbuf}} $\ast$r, uint8\+\_\+t c)
+\begin{DoxyCompactList}\small\item\em Insert a byte into the ring buffer. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group__ringbuf_gac026f083f85afa2163d5301909e1172a}{ringbuf\+\_\+get}} (struct \mbox{\hyperlink{structringbuf}{ringbuf}} $\ast$r, uint8\+\_\+t $\ast$c)
+\begin{DoxyCompactList}\small\item\em Get a byte from the ring buffer. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group__ringbuf_gac759b64c153104a4654093db90d51359}{ringbuf\+\_\+size}} (struct \mbox{\hyperlink{structringbuf}{ringbuf}} $\ast$r)
+\begin{DoxyCompactList}\small\item\em Get the size of a ring buffer. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group__ringbuf_gad0bd85c78251fe44333b7899805f1f64}{ringbuf\+\_\+elements}} (struct \mbox{\hyperlink{structringbuf}{ringbuf}} $\ast$r)
+\begin{DoxyCompactList}\small\item\em Get the number of elements currently in the ring buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Ring buffer library implementation \begin{DoxyAuthor}{Author}
+Adam Dunkels \href{mailto:adam@sics.se}{\texttt{ adam@sics.\+se}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{lib__ringbuf_8c_ab07d9588142cc3cbc42ca5d3e4dd4f60}\label{lib__ringbuf_8c_ab07d9588142cc3cbc42ca5d3e4dd4f60}} 
+\index{lib\_ringbuf.c@{lib\_ringbuf.c}!CC\_ACCESS\_NOW@{CC\_ACCESS\_NOW}}
+\index{CC\_ACCESS\_NOW@{CC\_ACCESS\_NOW}!lib\_ringbuf.c@{lib\_ringbuf.c}}
+\doxysubsubsection{\texorpdfstring{CC\_ACCESS\_NOW}{CC\_ACCESS\_NOW}}
+{\footnotesize\ttfamily \#define CC\+\_\+\+ACCESS\+\_\+\+NOW(\begin{DoxyParamCaption}\item[{}]{type,  }\item[{}]{variable }\end{DoxyParamCaption})~($\ast$(volatile type $\ast$)\&(variable))}
+
+This macro ensures that the access to a non-\/volatile variable can not be reordered or optimized by the compiler. See also \href{https://lwn.net/Articles/508991/}{\texttt{ https\+://lwn.\+net/\+Articles/508991/}} -\/ In Linux the macro is called ACCESS\+\_\+\+ONCE The type must be passed, because the typeof-\/operator is a gcc extension 

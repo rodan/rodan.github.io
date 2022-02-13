@@ -1,0 +1,28 @@
+\hypertarget{struct__spi__descriptor}{}\doxysection{\+\_\+spi\+\_\+descriptor Struct Reference}
+\label{struct__spi__descriptor}\index{\_spi\_descriptor@{\_spi\_descriptor}}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct__spi__descriptor_a46f24ce8c599d39e18333866a8a757bc}\label{struct__spi__descriptor_a46f24ce8c599d39e18333866a8a757bc}} 
+uint16\+\_\+t \mbox{\hyperlink{struct__spi__descriptor_a46f24ce8c599d39e18333866a8a757bc}{base\+Address}}
+\begin{DoxyCompactList}\small\item\em SPI subsystem offset base register. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct__spi__descriptor_abcf8187717e1a45e439a9d0e82e38a31}\label{struct__spi__descriptor_abcf8187717e1a45e439a9d0e82e38a31}} 
+void($\ast$ \mbox{\hyperlink{struct__spi__descriptor_abcf8187717e1a45e439a9d0e82e38a31}{cs\+\_\+low}} )()
+\begin{DoxyCompactList}\small\item\em pointer to function that brings the CS signal low \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct__spi__descriptor_a6dc4094b9bbd269497a711808f369ba8}\label{struct__spi__descriptor_a6dc4094b9bbd269497a711808f369ba8}} 
+void($\ast$ \mbox{\hyperlink{struct__spi__descriptor_a6dc4094b9bbd269497a711808f369ba8}{cs\+\_\+high}} )()
+\begin{DoxyCompactList}\small\item\em pointer to function that brings the CS signal high \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct__spi__descriptor_ad4a2e244a3494207afef0c13812cd230}\label{struct__spi__descriptor_ad4a2e244a3494207afef0c13812cd230}} 
+void($\ast$ \mbox{\hyperlink{struct__spi__descriptor_ad4a2e244a3494207afef0c13812cd230}{spi\+\_\+init}} )()
+\begin{DoxyCompactList}\small\item\em pointer to function that sets up the spi pins \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct__spi__descriptor_ab1798452f9b6f21b69d97e1225e917d5}\label{struct__spi__descriptor_ab1798452f9b6f21b69d97e1225e917d5}} 
+void($\ast$ \mbox{\hyperlink{struct__spi__descriptor_ab1798452f9b6f21b69d97e1225e917d5}{spi\+\_\+deinit}} )()
+\begin{DoxyCompactList}\small\item\em pointer to function that sets the spi pins to a HIGH-\/Z state \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct__spi__descriptor_a77a508d3f48130f104f83471b035fcbc}\label{struct__spi__descriptor_a77a508d3f48130f104f83471b035fcbc}} 
+uint8\+\_\+t($\ast$ \mbox{\hyperlink{struct__spi__descriptor_a77a508d3f48130f104f83471b035fcbc}{dev\+\_\+is\+\_\+busy}} )()
+\begin{DoxyCompactList}\small\item\em pointer to function that returns true if the device is busy, false otherwise \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+glue/generic/\mbox{\hyperlink{glue_2generic_2spi_8h}{spi.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,135 @@
+\hypertarget{group__ringbuf}{}\doxysection{Ring buffer library}
+\label{group__ringbuf}\index{Ring buffer library@{Ring buffer library}}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structringbuf}{ringbuf}}
+\begin{DoxyCompactList}\small\item\em Structure that holds the state of a ring buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__ringbuf_ga92e83d886845e9a8a012cf162ab26e4c}{ringbuf\+\_\+init}} (struct \mbox{\hyperlink{structringbuf}{ringbuf}} $\ast$r, uint8\+\_\+t $\ast$a, uint16\+\_\+t size\+\_\+power\+\_\+of\+\_\+two)
+\begin{DoxyCompactList}\small\item\em Initialize a ring buffer. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group__ringbuf_gaa13a963fb591bc52c6bb4b6a7886576f}{ringbuf\+\_\+put}} (struct \mbox{\hyperlink{structringbuf}{ringbuf}} $\ast$r, uint8\+\_\+t c)
+\begin{DoxyCompactList}\small\item\em Insert a byte into the ring buffer. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group__ringbuf_gac026f083f85afa2163d5301909e1172a}{ringbuf\+\_\+get}} (struct \mbox{\hyperlink{structringbuf}{ringbuf}} $\ast$r, uint8\+\_\+t $\ast$c)
+\begin{DoxyCompactList}\small\item\em Get a byte from the ring buffer. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group__ringbuf_gac759b64c153104a4654093db90d51359}{ringbuf\+\_\+size}} (struct \mbox{\hyperlink{structringbuf}{ringbuf}} $\ast$r)
+\begin{DoxyCompactList}\small\item\em Get the size of a ring buffer. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group__ringbuf_gad0bd85c78251fe44333b7899805f1f64}{ringbuf\+\_\+elements}} (struct \mbox{\hyperlink{structringbuf}{ringbuf}} $\ast$r)
+\begin{DoxyCompactList}\small\item\em Get the number of elements currently in the ring buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The ring buffer library implements ring (circular) buffer where bytes can be read and written independently. A ring buffer is particularly useful in device drivers where data can come in through interrupts. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__ringbuf_gad0bd85c78251fe44333b7899805f1f64}\label{group__ringbuf_gad0bd85c78251fe44333b7899805f1f64}} 
+\index{Ring buffer library@{Ring buffer library}!ringbuf\_elements@{ringbuf\_elements}}
+\index{ringbuf\_elements@{ringbuf\_elements}!Ring buffer library@{Ring buffer library}}
+\doxysubsubsection{\texorpdfstring{ringbuf\_elements()}{ringbuf\_elements()}}
+{\footnotesize\ttfamily uint8\+\_\+t ringbuf\+\_\+elements (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structringbuf}{ringbuf}} $\ast$}]{r }\end{DoxyParamCaption})}
+
+
+
+Get the number of elements currently in the ring buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & A pointer to a struct ringbuf to hold the state of the ring buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of elements in the buffer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__ringbuf_gac026f083f85afa2163d5301909e1172a}\label{group__ringbuf_gac026f083f85afa2163d5301909e1172a}} 
+\index{Ring buffer library@{Ring buffer library}!ringbuf\_get@{ringbuf\_get}}
+\index{ringbuf\_get@{ringbuf\_get}!Ring buffer library@{Ring buffer library}}
+\doxysubsubsection{\texorpdfstring{ringbuf\_get()}{ringbuf\_get()}}
+{\footnotesize\ttfamily uint8\+\_\+t ringbuf\+\_\+get (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structringbuf}{ringbuf}} $\ast$}]{r,  }\item[{uint8\+\_\+t $\ast$}]{c }\end{DoxyParamCaption})}
+
+
+
+Get a byte from the ring buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & A pointer to a struct ringbuf to hold the state of the ring buffer \\
+\hline
+{\em c} & A pointer to the byte retrieved from the ring buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Non-\/zero if there was data available on the ring buffer, or zero if the buffer was empty \begin{DoxyVerb}        This function removes a byte from the ring buffer. It
+        is safe to call this function from an interrupt
+        handler.
+\end{DoxyVerb}
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__ringbuf_ga92e83d886845e9a8a012cf162ab26e4c}\label{group__ringbuf_ga92e83d886845e9a8a012cf162ab26e4c}} 
+\index{Ring buffer library@{Ring buffer library}!ringbuf\_init@{ringbuf\_init}}
+\index{ringbuf\_init@{ringbuf\_init}!Ring buffer library@{Ring buffer library}}
+\doxysubsubsection{\texorpdfstring{ringbuf\_init()}{ringbuf\_init()}}
+{\footnotesize\ttfamily void ringbuf\+\_\+init (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structringbuf}{ringbuf}} $\ast$}]{r,  }\item[{uint8\+\_\+t $\ast$}]{a,  }\item[{uint16\+\_\+t}]{size\+\_\+power\+\_\+of\+\_\+two }\end{DoxyParamCaption})}
+
+
+
+Initialize a ring buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & A pointer to a struct ringbuf to hold the state of the ring buffer \\
+\hline
+{\em a} & A pointer to an array to hold the data in the buffer \\
+\hline
+{\em size\+\_\+power\+\_\+of\+\_\+two} & The size of the ring buffer, which must be a power of two \begin{DoxyVerb}        This function initiates a ring buffer. The data in the
+        buffer is stored in an external array, to which a
+        pointer must be supplied. The size of the ring buffer
+        must be a power of two and cannot be larger than 256
+        bytes.
+\end{DoxyVerb}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__ringbuf_gaa13a963fb591bc52c6bb4b6a7886576f}\label{group__ringbuf_gaa13a963fb591bc52c6bb4b6a7886576f}} 
+\index{Ring buffer library@{Ring buffer library}!ringbuf\_put@{ringbuf\_put}}
+\index{ringbuf\_put@{ringbuf\_put}!Ring buffer library@{Ring buffer library}}
+\doxysubsubsection{\texorpdfstring{ringbuf\_put()}{ringbuf\_put()}}
+{\footnotesize\ttfamily uint8\+\_\+t ringbuf\+\_\+put (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structringbuf}{ringbuf}} $\ast$}]{r,  }\item[{uint8\+\_\+t}]{c }\end{DoxyParamCaption})}
+
+
+
+Insert a byte into the ring buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & A pointer to a struct ringbuf to hold the state of the ring buffer \\
+\hline
+{\em c} & The byte to be written to the buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Non-\/zero if there data could be written, or zero if the buffer was full. \begin{DoxyVerb}        This function inserts a byte into the ring buffer. It
+        is safe to call this function from an interrupt
+        handler.
+\end{DoxyVerb}
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__ringbuf_gac759b64c153104a4654093db90d51359}\label{group__ringbuf_gac759b64c153104a4654093db90d51359}} 
+\index{Ring buffer library@{Ring buffer library}!ringbuf\_size@{ringbuf\_size}}
+\index{ringbuf\_size@{ringbuf\_size}!Ring buffer library@{Ring buffer library}}
+\doxysubsubsection{\texorpdfstring{ringbuf\_size()}{ringbuf\_size()}}
+{\footnotesize\ttfamily uint8\+\_\+t ringbuf\+\_\+size (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structringbuf}{ringbuf}} $\ast$}]{r }\end{DoxyParamCaption})}
+
+
+
+Get the size of a ring buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & A pointer to a struct ringbuf to hold the state of the ring buffer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The size of the buffer. 
+\end{DoxyReturn}

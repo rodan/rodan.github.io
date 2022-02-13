@@ -1,0 +1,46 @@
+\hypertarget{structevent__handler}{}\doxysection{event\+\_\+handler Struct Reference}
+\label{structevent__handler}\index{event\_handler@{event\_handler}}
+
+
+List of possible events.  
+
+
+
+
+{\ttfamily \#include $<$event\+\_\+handler.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+void($\ast$ \mbox{\hyperlink{structevent__handler_a1e257b4e06b2e65d89ea2524f4b7138d}{callback}} )(const uint32\+\_\+t \mbox{\hyperlink{structevent__handler_a56c02c34df91ccd69e02f53b10e61aeb}{evid}})
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structevent__handler_a56c02c34df91ccd69e02f53b10e61aeb}{evid}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+List of possible events. 
+
+\begin{DoxySeeAlso}{See also}
+eh\+\_\+register()
+\end{DoxySeeAlso}
+linked list of event handlers 
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structevent__handler_a1e257b4e06b2e65d89ea2524f4b7138d}\label{structevent__handler_a1e257b4e06b2e65d89ea2524f4b7138d}} 
+\index{event\_handler@{event\_handler}!callback@{callback}}
+\index{callback@{callback}!event\_handler@{event\_handler}}
+\doxysubsubsection{\texorpdfstring{callback}{callback}}
+{\footnotesize\ttfamily void($\ast$ event\+\_\+handler\+::callback) (const uint32\+\_\+t \mbox{\hyperlink{structevent__handler_a56c02c34df91ccd69e02f53b10e61aeb}{evid}})}
+
+interrupt handling function \mbox{\Hypertarget{structevent__handler_a56c02c34df91ccd69e02f53b10e61aeb}\label{structevent__handler_a56c02c34df91ccd69e02f53b10e61aeb}} 
+\index{event\_handler@{event\_handler}!evid@{evid}}
+\index{evid@{evid}!event\_handler@{event\_handler}}
+\doxysubsubsection{\texorpdfstring{evid}{evid}}
+{\footnotesize\ttfamily uint32\+\_\+t event\+\_\+handler\+::evid}
+
+bitfield of triggers for which the function should be run 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+glue/generic/event\+\_\+handler.\+h\end{DoxyCompactItemize}

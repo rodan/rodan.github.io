@@ -1,0 +1,86 @@
+\hypertarget{group__tca6408}{}\doxysection{8bit i2c IO expander driver}
+\label{group__tca6408}\index{8bit i2c IO expander driver@{8bit i2c IO expander driver}}
+
+
+driver for the TI TCA6408 chip  
+
+
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__tca6408_ga580a1a4ad7374578e683104ff96a2e04}\label{group__tca6408_ga580a1a4ad7374578e683104ff96a2e04}} 
+\#define {\bfseries TCA6408\+\_\+\+INPUT}~0x0
+\item 
+\mbox{\Hypertarget{group__tca6408_gab9f6d0c217ff3dd16aae56ceb2ce8ad2}\label{group__tca6408_gab9f6d0c217ff3dd16aae56ceb2ce8ad2}} 
+\#define {\bfseries TCA6408\+\_\+\+OUTPUT}~0x1
+\item 
+\mbox{\Hypertarget{group__tca6408_gabfa9e20f69556cef67ebc614312842b9}\label{group__tca6408_gabfa9e20f69556cef67ebc614312842b9}} 
+\#define {\bfseries TCA6408\+\_\+\+POL\+\_\+\+INV}~0x2
+\item 
+\mbox{\Hypertarget{group__tca6408_ga9a78689a396f554095da3b84c56da389}\label{group__tca6408_ga9a78689a396f554095da3b84c56da389}} 
+\#define {\bfseries TCA6408\+\_\+\+CONF}~0x3
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group__tca6408_gaed9afd1c6fa66116b394c281e1ffaba8}{TCA6408\+\_\+read}} (const uint16\+\_\+t usci\+\_\+base\+\_\+addr, const uint8\+\_\+t slave\+\_\+addr, uint8\+\_\+t $\ast$data, const uint8\+\_\+t addr)
+\begin{DoxyCompactList}\small\item\em start a one byte selective read \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group__tca6408_ga016e4407f23e6419f006bb5006c93c5f}{TCA6408\+\_\+write}} (const uint16\+\_\+t usci\+\_\+base\+\_\+addr, const uint8\+\_\+t slave\+\_\+addr, uint8\+\_\+t $\ast$data, const uint8\+\_\+t addr)
+\begin{DoxyCompactList}\small\item\em start a one byte write \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+driver for the TI TCA6408 chip 
+
+\begin{DoxyAuthor}{Author}
+Petre Rodan 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__tca6408_gaed9afd1c6fa66116b394c281e1ffaba8}\label{group__tca6408_gaed9afd1c6fa66116b394c281e1ffaba8}} 
+\index{8bit i2c IO expander driver@{8bit i2c IO expander driver}!TCA6408\_read@{TCA6408\_read}}
+\index{TCA6408\_read@{TCA6408\_read}!8bit i2c IO expander driver@{8bit i2c IO expander driver}}
+\doxysubsubsection{\texorpdfstring{TCA6408\_read()}{TCA6408\_read()}}
+{\footnotesize\ttfamily uint8\+\_\+t TCA6408\+\_\+read (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t}]{usci\+\_\+base\+\_\+addr,  }\item[{const uint8\+\_\+t}]{slave\+\_\+addr,  }\item[{uint8\+\_\+t $\ast$}]{data,  }\item[{const uint8\+\_\+t}]{addr }\end{DoxyParamCaption})}
+
+
+
+start a one byte selective read 
+
+this function begins a new I2C multi-\/byte selective read.
+
+
+\begin{DoxyParams}{Parameters}
+{\em usci\+\_\+base\+\_\+address} & MSP430-\/related register address of the USCI subsystem. can be USCI\+\_\+\+B0\+\_\+\+BASE -\/ USCI\+\_\+\+B1\+\_\+\+BASE, EUSCI\+\_\+\+B0\+\_\+\+BASE -\/ EUSCI\+\_\+\+B3\+\_\+\+BASE \\
+\hline
+{\em slave\+\_\+addrress} & chip i2c address \\
+\hline
+{\em data} & pointer to pre-\/allocated buffer where the read data is to be written. make sure it\textquotesingle{}s at least data\+\_\+len in lenght \\
+\hline
+{\em addr} & FM24 address where the read will start \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__tca6408_ga016e4407f23e6419f006bb5006c93c5f}\label{group__tca6408_ga016e4407f23e6419f006bb5006c93c5f}} 
+\index{8bit i2c IO expander driver@{8bit i2c IO expander driver}!TCA6408\_write@{TCA6408\_write}}
+\index{TCA6408\_write@{TCA6408\_write}!8bit i2c IO expander driver@{8bit i2c IO expander driver}}
+\doxysubsubsection{\texorpdfstring{TCA6408\_write()}{TCA6408\_write()}}
+{\footnotesize\ttfamily uint8\+\_\+t TCA6408\+\_\+write (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t}]{usci\+\_\+base\+\_\+addr,  }\item[{const uint8\+\_\+t}]{slave\+\_\+addr,  }\item[{uint8\+\_\+t $\ast$}]{data,  }\item[{const uint8\+\_\+t}]{addr }\end{DoxyParamCaption})}
+
+
+
+start a one byte write 
+
+this function begins a new I2C multi-\/byte selective read.
+
+
+\begin{DoxyParams}{Parameters}
+{\em usci\+\_\+base\+\_\+address} & MSP430-\/related register address of the USCI subsystem. can be USCI\+\_\+\+B0\+\_\+\+BASE -\/ USCI\+\_\+\+B1\+\_\+\+BASE, EUSCI\+\_\+\+B0\+\_\+\+BASE -\/ EUSCI\+\_\+\+B3\+\_\+\+BASE \\
+\hline
+{\em slave\+\_\+addrress} & chip i2c address \\
+\hline
+{\em data} & pointer to buffer where the written data is provided \\
+\hline
+{\em addr} & FM24 address where the write will start \\
+\hline
+\end{DoxyParams}

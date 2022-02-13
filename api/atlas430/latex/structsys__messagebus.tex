@@ -1,0 +1,49 @@
+\hypertarget{structsys__messagebus}{}\doxysection{sys\+\_\+messagebus Struct Reference}
+\label{structsys__messagebus}\index{sys\_messagebus@{sys\_messagebus}}
+
+
+Linked list of nodes listening to the message bus.  
+
+
+
+
+{\ttfamily \#include $<$sys\+\_\+messagebus.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+void($\ast$ \mbox{\hyperlink{structsys__messagebus_a57e02f66fef25801706d2aed7841a3a9}{fn}} )(enum sys\+\_\+message)
+\item 
+enum sys\+\_\+message \mbox{\hyperlink{structsys__messagebus_afad075ee7aa85e3f805ca5b61feb7c9d}{listens}}
+\item 
+struct \mbox{\hyperlink{structsys__messagebus}{sys\+\_\+messagebus}} $\ast$ \mbox{\hyperlink{structsys__messagebus_aa7b1c9d63a9b8a2b8cda11b3983ed212}{next}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Linked list of nodes listening to the message bus. 
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structsys__messagebus_a57e02f66fef25801706d2aed7841a3a9}\label{structsys__messagebus_a57e02f66fef25801706d2aed7841a3a9}} 
+\index{sys\_messagebus@{sys\_messagebus}!fn@{fn}}
+\index{fn@{fn}!sys\_messagebus@{sys\_messagebus}}
+\doxysubsubsection{\texorpdfstring{fn}{fn}}
+{\footnotesize\ttfamily void($\ast$ sys\+\_\+messagebus\+::fn) (enum sys\+\_\+message)}
+
+callback for receiving messages from the system bus \mbox{\Hypertarget{structsys__messagebus_afad075ee7aa85e3f805ca5b61feb7c9d}\label{structsys__messagebus_afad075ee7aa85e3f805ca5b61feb7c9d}} 
+\index{sys\_messagebus@{sys\_messagebus}!listens@{listens}}
+\index{listens@{listens}!sys\_messagebus@{sys\_messagebus}}
+\doxysubsubsection{\texorpdfstring{listens}{listens}}
+{\footnotesize\ttfamily enum sys\+\_\+message sys\+\_\+messagebus\+::listens}
+
+bitfield of message types that the node wishes to receive \mbox{\Hypertarget{structsys__messagebus_aa7b1c9d63a9b8a2b8cda11b3983ed212}\label{structsys__messagebus_aa7b1c9d63a9b8a2b8cda11b3983ed212}} 
+\index{sys\_messagebus@{sys\_messagebus}!next@{next}}
+\index{next@{next}!sys\_messagebus@{sys\_messagebus}}
+\doxysubsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structsys__messagebus}{sys\+\_\+messagebus}}$\ast$ sys\+\_\+messagebus\+::next}
+
+pointer to the next node in the list 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+old\+\_\+drivers/drivers/sys\+\_\+messagebus.\+h\end{DoxyCompactItemize}

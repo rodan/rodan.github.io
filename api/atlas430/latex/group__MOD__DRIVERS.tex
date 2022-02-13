@@ -1,0 +1,577 @@
+\hypertarget{group__MOD__DRIVERS}{}\doxysection{Maxim DS3234 IC driver}
+\label{group__MOD__DRIVERS}\index{Maxim DS3234 IC driver@{Maxim DS3234 IC driver}}
+
+
+driver for the Maxim DS3234 RTC chip  
+
+
+\doxysubsection*{Files}
+\begin{DoxyCompactItemize}
+\item 
+file \mbox{\hyperlink{ds3234_8h}{ds3234.\+h}}
+\begin{DoxyCompactList}\small\item\em Include file for \mbox{\hyperlink{group__MOD__DRIVERS}{Maxim DS3234 IC driver}}. \end{DoxyCompactList}\item 
+file \mbox{\hyperlink{mcp42_8h}{mcp42.\+h}}
+\begin{DoxyCompactList}\small\item\em Include file for \mbox{\hyperlink{group__MOD__DRIVERS}{Maxim DS3234 IC driver}}. \end{DoxyCompactList}\item 
+file \mbox{\hyperlink{pga2311_8h}{pga2311.\+h}}
+\begin{DoxyCompactList}\small\item\em Include file for \mbox{\hyperlink{group__MOD__DRIVERS}{Maxim DS3234 IC driver}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__MOD__DRIVERS_ga1ca67574d5d08f7c2e663df524a939c3}{DS3234\+\_\+\+REG\+\_\+\+RTC}}~0x00
+\begin{DoxyCompactList}\small\item\em DS3234 registers. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__MOD__DRIVERS_gad45ef3c9a614400dd0e8a137725d83fe}\label{group__MOD__DRIVERS_gad45ef3c9a614400dd0e8a137725d83fe}} 
+\#define \mbox{\hyperlink{group__MOD__DRIVERS_gad45ef3c9a614400dd0e8a137725d83fe}{DS3234\+\_\+\+REG\+\_\+\+A1}}~0x07
+\begin{DoxyCompactList}\small\item\em alarm1 seconds \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__MOD__DRIVERS_gaebd4bf1e9ece10e438026978930b5a0a}\label{group__MOD__DRIVERS_gaebd4bf1e9ece10e438026978930b5a0a}} 
+\#define \mbox{\hyperlink{group__MOD__DRIVERS_gaebd4bf1e9ece10e438026978930b5a0a}{DS3234\+\_\+\+REG\+\_\+\+A2}}~0x0b
+\begin{DoxyCompactList}\small\item\em alarm2 minutes \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__MOD__DRIVERS_gaa559ee53dd334b1c14c69557a7faddb2}\label{group__MOD__DRIVERS_gaa559ee53dd334b1c14c69557a7faddb2}} 
+\#define \mbox{\hyperlink{group__MOD__DRIVERS_gaa559ee53dd334b1c14c69557a7faddb2}{DS3234\+\_\+\+REG\+\_\+\+CTRL}}~0x0e
+\begin{DoxyCompactList}\small\item\em control register \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__MOD__DRIVERS_gaa0153d46a2ed16d38c50ceb9a12b07f5}\label{group__MOD__DRIVERS_gaa0153d46a2ed16d38c50ceb9a12b07f5}} 
+\#define \mbox{\hyperlink{group__MOD__DRIVERS_gaa0153d46a2ed16d38c50ceb9a12b07f5}{DS3234\+\_\+\+REG\+\_\+\+STA}}~0x0f
+\begin{DoxyCompactList}\small\item\em control/status register \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__MOD__DRIVERS_gaa3bafe074ae7cb4db08d4b5684a35346}\label{group__MOD__DRIVERS_gaa3bafe074ae7cb4db08d4b5684a35346}} 
+\#define \mbox{\hyperlink{group__MOD__DRIVERS_gaa3bafe074ae7cb4db08d4b5684a35346}{DS3234\+\_\+\+REG\+\_\+\+AGING}}~0x10
+\begin{DoxyCompactList}\small\item\em crystal aging offset \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__MOD__DRIVERS_ga903635f3834fe19f913d6e28ca95be33}\label{group__MOD__DRIVERS_ga903635f3834fe19f913d6e28ca95be33}} 
+\#define \mbox{\hyperlink{group__MOD__DRIVERS_ga903635f3834fe19f913d6e28ca95be33}{DS3234\+\_\+\+REG\+\_\+\+TEMP}}~0x11
+\begin{DoxyCompactList}\small\item\em temperature \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__MOD__DRIVERS_gaeaf80909b7705546e85e14cb6311b150}\label{group__MOD__DRIVERS_gaeaf80909b7705546e85e14cb6311b150}} 
+\#define \mbox{\hyperlink{group__MOD__DRIVERS_gaeaf80909b7705546e85e14cb6311b150}{DS3234\+\_\+\+REG\+\_\+\+CONV}}~0x13
+\begin{DoxyCompactList}\small\item\em disable temp conversions \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__MOD__DRIVERS_ga4c500f0c823d3f73904075bd09d8e2cb}\label{group__MOD__DRIVERS_ga4c500f0c823d3f73904075bd09d8e2cb}} 
+\#define \mbox{\hyperlink{group__MOD__DRIVERS_ga4c500f0c823d3f73904075bd09d8e2cb}{DS3234\+\_\+\+REG\+\_\+\+SRAM\+\_\+\+ADDR}}~0x18
+\begin{DoxyCompactList}\small\item\em SRAM address. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__MOD__DRIVERS_gabaa5c2374e1c467ab111b82080953da4}\label{group__MOD__DRIVERS_gabaa5c2374e1c467ab111b82080953da4}} 
+\#define \mbox{\hyperlink{group__MOD__DRIVERS_gabaa5c2374e1c467ab111b82080953da4}{DS3234\+\_\+\+REG\+\_\+\+SRAM\+\_\+\+DATA}}~0x19
+\begin{DoxyCompactList}\small\item\em SRAM data. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__MOD__DRIVERS_gafe8dd218372e04b452af989298d7b28c}{DS3234\+\_\+\+A1\+IE}}~0x01
+\begin{DoxyCompactList}\small\item\em control register 0x0e \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__MOD__DRIVERS_gae9116b3a8b6f3ef4c50605aa765937ca}\label{group__MOD__DRIVERS_gae9116b3a8b6f3ef4c50605aa765937ca}} 
+\#define \mbox{\hyperlink{group__MOD__DRIVERS_gae9116b3a8b6f3ef4c50605aa765937ca}{DS3234\+\_\+\+A2\+IE}}~0x02
+\begin{DoxyCompactList}\small\item\em Alarm2 interrupt enable (1 to enable) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__MOD__DRIVERS_gaf5e6e2698114efcf854020427ecdd907}\label{group__MOD__DRIVERS_gaf5e6e2698114efcf854020427ecdd907}} 
+\#define \mbox{\hyperlink{group__MOD__DRIVERS_gaf5e6e2698114efcf854020427ecdd907}{DS3234\+\_\+\+INTCN}}~0x04
+\begin{DoxyCompactList}\small\item\em Interrupt control (1 for use of the alarms and to disable square wave) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__MOD__DRIVERS_ga74a110538b393f978e3d498c74c8761e}\label{group__MOD__DRIVERS_ga74a110538b393f978e3d498c74c8761e}} 
+\#define \mbox{\hyperlink{group__MOD__DRIVERS_ga74a110538b393f978e3d498c74c8761e}{DS3234\+\_\+\+RS1}}~0x08
+\begin{DoxyCompactList}\small\item\em Rate select -\/ frequency of square wave output. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__MOD__DRIVERS_ga98c8e154360aaecb2fd5458ad4548dfc}\label{group__MOD__DRIVERS_ga98c8e154360aaecb2fd5458ad4548dfc}} 
+\#define \mbox{\hyperlink{group__MOD__DRIVERS_ga98c8e154360aaecb2fd5458ad4548dfc}{DS3234\+\_\+\+RS2}}~0x10
+\begin{DoxyCompactList}\small\item\em Rate select -\/ frequency of square wave output. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__MOD__DRIVERS_gaa9cdfd8fdc0d70c229d679e3d51b0d03}\label{group__MOD__DRIVERS_gaa9cdfd8fdc0d70c229d679e3d51b0d03}} 
+\#define \mbox{\hyperlink{group__MOD__DRIVERS_gaa9cdfd8fdc0d70c229d679e3d51b0d03}{DS3234\+\_\+\+CONV}}~0x20
+\begin{DoxyCompactList}\small\item\em Convert temperature (1 forces a new conversion) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__MOD__DRIVERS_ga4039e12625d5a494a7bafb6a37c2ca3d}\label{group__MOD__DRIVERS_ga4039e12625d5a494a7bafb6a37c2ca3d}} 
+\#define \mbox{\hyperlink{group__MOD__DRIVERS_ga4039e12625d5a494a7bafb6a37c2ca3d}{DS3234\+\_\+\+BBSQW}}~0x40
+\begin{DoxyCompactList}\small\item\em Battery Backed Square Wave. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__MOD__DRIVERS_ga9a7301cef12e21d11b47198fba393f82}\label{group__MOD__DRIVERS_ga9a7301cef12e21d11b47198fba393f82}} 
+\#define \mbox{\hyperlink{group__MOD__DRIVERS_ga9a7301cef12e21d11b47198fba393f82}{DS3234\+\_\+\+EOSC}}~0x80
+\begin{DoxyCompactList}\small\item\em Enable Oscillator (1 if oscillator must be stopped when on battery) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__MOD__DRIVERS_ga2527c7b95a004abdd3136e3583796594}{DS3234\+\_\+\+A1F}}~0x01
+\begin{DoxyCompactList}\small\item\em control/status register 0x0f \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__MOD__DRIVERS_ga7e2b6c4c8b2dcae671d83aad91dcd160}\label{group__MOD__DRIVERS_ga7e2b6c4c8b2dcae671d83aad91dcd160}} 
+\#define \mbox{\hyperlink{group__MOD__DRIVERS_ga7e2b6c4c8b2dcae671d83aad91dcd160}{DS3234\+\_\+\+A2F}}~0x02
+\begin{DoxyCompactList}\small\item\em Alarm 2 Flag -\/ (1 if alarm2 was triggered) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__MOD__DRIVERS_gad985d749a9325902cd3d7366f7adbd81}\label{group__MOD__DRIVERS_gad985d749a9325902cd3d7366f7adbd81}} 
+\#define \mbox{\hyperlink{group__MOD__DRIVERS_gad985d749a9325902cd3d7366f7adbd81}{DS3234\+\_\+\+BSY}}~0x04
+\begin{DoxyCompactList}\small\item\em Busy with TCXO functions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__MOD__DRIVERS_ga8e85fdbaab0024b9047df50abed30f9a}\label{group__MOD__DRIVERS_ga8e85fdbaab0024b9047df50abed30f9a}} 
+\#define \mbox{\hyperlink{group__MOD__DRIVERS_ga8e85fdbaab0024b9047df50abed30f9a}{DS3234\+\_\+\+EN32\+KHZ}}~0x08
+\begin{DoxyCompactList}\small\item\em Enable 32k\+Hz output (1 if needed) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__MOD__DRIVERS_gac3f50248982937a5dd7c8d3b0d107a2f}\label{group__MOD__DRIVERS_gac3f50248982937a5dd7c8d3b0d107a2f}} 
+\#define \mbox{\hyperlink{group__MOD__DRIVERS_gac3f50248982937a5dd7c8d3b0d107a2f}{DS3234\+\_\+\+CRATE0}}~0x10
+\begin{DoxyCompactList}\small\item\em Conversion rate 0 temperature compensation rate. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__MOD__DRIVERS_ga7cec398542a6cbf5fa9af36c97dac68d}\label{group__MOD__DRIVERS_ga7cec398542a6cbf5fa9af36c97dac68d}} 
+\#define \mbox{\hyperlink{group__MOD__DRIVERS_ga7cec398542a6cbf5fa9af36c97dac68d}{DS3234\+\_\+\+CRATE1}}~0x20
+\begin{DoxyCompactList}\small\item\em Conversion rate 1 temperature compensation rate. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__MOD__DRIVERS_ga683ed562c61c3f94620e346887e50116}\label{group__MOD__DRIVERS_ga683ed562c61c3f94620e346887e50116}} 
+\#define \mbox{\hyperlink{group__MOD__DRIVERS_ga683ed562c61c3f94620e346887e50116}{DS3234\+\_\+\+BB32\+KHZ}}~0x40
+\begin{DoxyCompactList}\small\item\em Battery Backed 32k\+Hz output (1 if square wave is needed when powered by battery) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__MOD__DRIVERS_gacf80fb8c1798cc0e9cf95c0d4268884f}{DS3234\+\_\+\+OSF}}~0x80
+\begin{DoxyCompactList}\small\item\em Oscillator Stop Flag (if 1 then oscillator has stopped and date might be innacurate) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__MOD__DRIVERS_gad19c8bd5ab5bd2fd40f0de788204c1c0}\label{group__MOD__DRIVERS_gad19c8bd5ab5bd2fd40f0de788204c1c0}} 
+\#define \mbox{\hyperlink{group__MOD__DRIVERS_gad19c8bd5ab5bd2fd40f0de788204c1c0}{DS3234\+\_\+\+A1\+\_\+\+NOMATCH}}~0x0f
+\begin{DoxyCompactList}\small\item\em trigger alarm every second, nothing needs to match \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__MOD__DRIVERS_ga292284cf2056819fd4fb6730df64fe8e}\label{group__MOD__DRIVERS_ga292284cf2056819fd4fb6730df64fe8e}} 
+\#define \mbox{\hyperlink{group__MOD__DRIVERS_ga292284cf2056819fd4fb6730df64fe8e}{DS3234\+\_\+\+A1\+\_\+\+S\+\_\+\+MATCH}}~0x0e
+\begin{DoxyCompactList}\small\item\em alarm when seconds match \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__MOD__DRIVERS_ga27443fb7b509b84fac6368e85c714b76}\label{group__MOD__DRIVERS_ga27443fb7b509b84fac6368e85c714b76}} 
+\#define \mbox{\hyperlink{group__MOD__DRIVERS_ga27443fb7b509b84fac6368e85c714b76}{DS3234\+\_\+\+A1\+\_\+\+SM\+\_\+\+MATCH}}~0x0c
+\begin{DoxyCompactList}\small\item\em alarm when seconds and minutes match \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__MOD__DRIVERS_ga21a86d59aea485b99141493b06b668ec}\label{group__MOD__DRIVERS_ga21a86d59aea485b99141493b06b668ec}} 
+\#define \mbox{\hyperlink{group__MOD__DRIVERS_ga21a86d59aea485b99141493b06b668ec}{DS3234\+\_\+\+A1\+\_\+\+SMH\+\_\+\+MATCH}}~0x08
+\begin{DoxyCompactList}\small\item\em alarm when seconds, minutes and hours match \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__MOD__DRIVERS_gac65f3fc250f51bc99a5ee953785744a1}\label{group__MOD__DRIVERS_gac65f3fc250f51bc99a5ee953785744a1}} 
+\#define \mbox{\hyperlink{group__MOD__DRIVERS_gac65f3fc250f51bc99a5ee953785744a1}{DS3234\+\_\+\+A1\+\_\+\+SMHDm\+\_\+\+MATCH}}~0x00
+\begin{DoxyCompactList}\small\item\em alarm when seconds, minutes, hours and day of month match \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__MOD__DRIVERS_ga6e6fdd95a04fa62bbf90fe74096c6abe}{DS3234\+\_\+\+A1\+\_\+\+SMHDw\+\_\+\+MATCH}}~0x10
+\begin{DoxyCompactList}\small\item\em alarm when seconds, minutes, hours and day of week match \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__MOD__DRIVERS_ga18231176d10040872bf8e2483b46a557}\label{group__MOD__DRIVERS_ga18231176d10040872bf8e2483b46a557}} 
+\#define \mbox{\hyperlink{group__MOD__DRIVERS_ga18231176d10040872bf8e2483b46a557}{DS3234\+\_\+\+A2\+\_\+\+NOMATCH}}~0x07
+\begin{DoxyCompactList}\small\item\em alarm once every minute at 0 seconds of each minute \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__MOD__DRIVERS_gac0e94d7868bacdc3e71c1a53dbfc1ee1}\label{group__MOD__DRIVERS_gac0e94d7868bacdc3e71c1a53dbfc1ee1}} 
+\#define \mbox{\hyperlink{group__MOD__DRIVERS_gac0e94d7868bacdc3e71c1a53dbfc1ee1}{DS3234\+\_\+\+A2\+\_\+\+M\+\_\+\+MATCH}}~0x06
+\begin{DoxyCompactList}\small\item\em alarm when minutes match \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__MOD__DRIVERS_ga815e861eefc194cdc9b43a03388c6402}\label{group__MOD__DRIVERS_ga815e861eefc194cdc9b43a03388c6402}} 
+\#define \mbox{\hyperlink{group__MOD__DRIVERS_ga815e861eefc194cdc9b43a03388c6402}{DS3234\+\_\+\+A2\+\_\+\+MH\+\_\+\+MATCH}}~0x04
+\begin{DoxyCompactList}\small\item\em alarm when minutes and hours match \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__MOD__DRIVERS_ga9e89d9977c49ffa19a02c97ecb6a00e2}\label{group__MOD__DRIVERS_ga9e89d9977c49ffa19a02c97ecb6a00e2}} 
+\#define \mbox{\hyperlink{group__MOD__DRIVERS_ga9e89d9977c49ffa19a02c97ecb6a00e2}{DS3234\+\_\+\+A2\+\_\+\+MHDm\+\_\+\+MATCH}}~0x00
+\begin{DoxyCompactList}\small\item\em alarm when minutes, hours and day of month match \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__MOD__DRIVERS_ga35d399447cf7843a87e30b51b0de0acd}\label{group__MOD__DRIVERS_ga35d399447cf7843a87e30b51b0de0acd}} 
+\#define \mbox{\hyperlink{group__MOD__DRIVERS_ga35d399447cf7843a87e30b51b0de0acd}{DS3234\+\_\+\+A2\+\_\+\+MHDw\+\_\+\+MATCH}}~0x08
+\begin{DoxyCompactList}\small\item\em alarm when minutes, hours and day of week match \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__MOD__DRIVERS_ga518834706b17964c9b6d353710343709}\label{group__MOD__DRIVERS_ga518834706b17964c9b6d353710343709}} 
+\#define \mbox{\hyperlink{group__MOD__DRIVERS_ga518834706b17964c9b6d353710343709}{MCP42\+\_\+\+WRITE\+\_\+\+DATA}}~0x10
+\begin{DoxyCompactList}\small\item\em MCP42\+XXX bitflags. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__MOD__DRIVERS_ga436cc9f2fcb8b835061652b9d42ba519}\label{group__MOD__DRIVERS_ga436cc9f2fcb8b835061652b9d42ba519}} 
+\#define {\bfseries MCP42\+\_\+\+SHUTDOWN}~0x20
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group__MOD__DRIVERS_gab61a45288237b0797dbea9f964d3a2d3}{DS3234\+\_\+read}} (const \mbox{\hyperlink{group__MOD__SPI_ga3495a938aee225923b71614a09e22bc3}{spi\+\_\+descriptor}} $\ast$spid, const uint8\+\_\+t addr, uint8\+\_\+t $\ast$buf, const uint8\+\_\+t count)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group__MOD__DRIVERS_ga3c8b23e40886e382d3fb2c56bf6fb98f}{DS3234\+\_\+write}} (const \mbox{\hyperlink{group__MOD__SPI_ga3495a938aee225923b71614a09e22bc3}{spi\+\_\+descriptor}} $\ast$spid, const uint8\+\_\+t addr, uint8\+\_\+t $\ast$buf, const uint8\+\_\+t count)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group__MOD__DRIVERS_gaff4bed0ed9e1ccf321036fa8a94d3b97}{DS3234\+\_\+read\+\_\+reg}} (const \mbox{\hyperlink{group__MOD__SPI_ga3495a938aee225923b71614a09e22bc3}{spi\+\_\+descriptor}} $\ast$spid, const uint8\+\_\+t addr, uint8\+\_\+t $\ast$val)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group__MOD__DRIVERS_ga87b8158724302c4c51d9b1c67a7cc075}{DS3234\+\_\+write\+\_\+reg}} (const \mbox{\hyperlink{group__MOD__SPI_ga3495a938aee225923b71614a09e22bc3}{spi\+\_\+descriptor}} $\ast$spid, const uint8\+\_\+t addr, const uint8\+\_\+t val)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group__MOD__DRIVERS_gaa676d5208f062bc1d97a642f2be978eb}{DS3234\+\_\+read\+\_\+rtc}} (const \mbox{\hyperlink{group__MOD__SPI_ga3495a938aee225923b71614a09e22bc3}{spi\+\_\+descriptor}} $\ast$spid, struct \mbox{\hyperlink{structts}{ts}} $\ast$t)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group__MOD__DRIVERS_ga15bcf534bdeaec52904d859a23c117e6}{DS3234\+\_\+write\+\_\+rtc}} (const \mbox{\hyperlink{group__MOD__SPI_ga3495a938aee225923b71614a09e22bc3}{spi\+\_\+descriptor}} $\ast$spid, struct \mbox{\hyperlink{structts}{ts}} $\ast$t)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group__MOD__DRIVERS_gaaa7bd19cdc31e2903f6887e9b3120afa}{DS3234\+\_\+read\+\_\+a1}} (const \mbox{\hyperlink{group__MOD__SPI_ga3495a938aee225923b71614a09e22bc3}{spi\+\_\+descriptor}} $\ast$spid, struct \mbox{\hyperlink{structts}{ts}} $\ast$t, uint8\+\_\+t $\ast$flags)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group__MOD__DRIVERS_ga0955931ebf7cd9965a94aba94d8c6624}{DS3234\+\_\+write\+\_\+a1}} (const \mbox{\hyperlink{group__MOD__SPI_ga3495a938aee225923b71614a09e22bc3}{spi\+\_\+descriptor}} $\ast$spid, const struct \mbox{\hyperlink{structts}{ts}} $\ast$t, const uint8\+\_\+t flags)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group__MOD__DRIVERS_ga7f62e0a85c9e780c42260257ae81cd86}{DS3234\+\_\+read\+\_\+a2}} (const \mbox{\hyperlink{group__MOD__SPI_ga3495a938aee225923b71614a09e22bc3}{spi\+\_\+descriptor}} $\ast$spid, struct \mbox{\hyperlink{structts}{ts}} $\ast$t, uint8\+\_\+t $\ast$flags)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group__MOD__DRIVERS_ga989d5c69de25e36530b8fd6673a95b0d}{DS3234\+\_\+write\+\_\+a2}} (const \mbox{\hyperlink{group__MOD__SPI_ga3495a938aee225923b71614a09e22bc3}{spi\+\_\+descriptor}} $\ast$spid, const struct \mbox{\hyperlink{structts}{ts}} $\ast$t, const uint8\+\_\+t flags)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group__MOD__DRIVERS_gab0df3545bfb9aae7f708e3580ba8d778}{DS3234\+\_\+read\+\_\+aging}} (const \mbox{\hyperlink{group__MOD__SPI_ga3495a938aee225923b71614a09e22bc3}{spi\+\_\+descriptor}} $\ast$spid, int8\+\_\+t $\ast$value)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group__MOD__DRIVERS_gaf066de47d50a49f201a4dd2f18f12282}{DS3234\+\_\+write\+\_\+aging}} (const \mbox{\hyperlink{group__MOD__SPI_ga3495a938aee225923b71614a09e22bc3}{spi\+\_\+descriptor}} $\ast$spid, const int8\+\_\+t value)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group__MOD__DRIVERS_ga4ab02d108d17a4d5d03955f0d524ec5a}{DS3234\+\_\+read\+\_\+temp}} (const \mbox{\hyperlink{group__MOD__SPI_ga3495a938aee225923b71614a09e22bc3}{spi\+\_\+descriptor}} $\ast$spid, int16\+\_\+t $\ast$value)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group__MOD__DRIVERS_ga8c34d8b43e4d9fcab814e9f93eaa8c92}{DS3234\+\_\+read\+\_\+sram}} (const \mbox{\hyperlink{group__MOD__SPI_ga3495a938aee225923b71614a09e22bc3}{spi\+\_\+descriptor}} $\ast$spid, const uint8\+\_\+t addr, uint8\+\_\+t $\ast$buf, const uint8\+\_\+t count)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group__MOD__DRIVERS_ga56c94b3207c9f04478c5130d6d584299}{DS3234\+\_\+write\+\_\+sram}} (const \mbox{\hyperlink{group__MOD__SPI_ga3495a938aee225923b71614a09e22bc3}{spi\+\_\+descriptor}} $\ast$spid, const uint8\+\_\+t addr, uint8\+\_\+t $\ast$buf, const uint8\+\_\+t count)
+\item 
+void \mbox{\hyperlink{group__MOD__DRIVERS_ga654157de67fd31dea5d234f70961cb7d}{MCP42\+\_\+set\+\_\+pot\+\_\+ch}} (const \mbox{\hyperlink{group__MOD__SPI_ga3495a938aee225923b71614a09e22bc3}{spi\+\_\+descriptor}} $\ast$spid, const uint8\+\_\+t pot\+\_\+id, const uint8\+\_\+t pot\+\_\+val)
+\item 
+void \mbox{\hyperlink{group__MOD__DRIVERS_ga1723cacf8656436393dd3c16b8779b92}{MCP42\+\_\+set\+\_\+pot}} (const \mbox{\hyperlink{group__MOD__SPI_ga3495a938aee225923b71614a09e22bc3}{spi\+\_\+descriptor}} $\ast$spid, const uint8\+\_\+t pot\+\_\+ch0\+\_\+val, const uint8\+\_\+t pot\+\_\+ch1\+\_\+val)
+\item 
+void \mbox{\hyperlink{group__MOD__DRIVERS_ga2e94464c48d3712ad70ab82c78c2fde2}{MCP42\+\_\+shutdown\+\_\+pot}} (const \mbox{\hyperlink{group__MOD__SPI_ga3495a938aee225923b71614a09e22bc3}{spi\+\_\+descriptor}} $\ast$spid, const uint8\+\_\+t pot\+\_\+id)
+\item 
+void \mbox{\hyperlink{group__MOD__DRIVERS_ga9577844562bb6c2f61b5a2d2a6e405a5}{pga\+\_\+set\+\_\+volume}} (const \mbox{\hyperlink{group__MOD__SPI_ga3495a938aee225923b71614a09e22bc3}{spi\+\_\+descriptor}} $\ast$spid, const uint8\+\_\+t vol\+\_\+right, const uint8\+\_\+t vol\+\_\+left)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+driver for the Maxim DS3234 RTC chip 
+
+driver for the TI PGA2311 stereo audio volume control chip
+
+driver for the MCP42xxx dual digital potentiometer chip
+
+\begin{DoxyNote}{Note}
+the CS signal is managed by the library, but make sure the spi\+\_\+descriptor is populated correctly 
+
+during write transfers, there is no need to set the most significat bit in the address byte to one, the library takes care of it 
+\end{DoxyNote}
+\begin{DoxyAuthor}{Author}
+Petre Rodan
+\end{DoxyAuthor}
+\begin{DoxyNote}{Note}
+the CS signal is managed by the library, but make sure the spi\+\_\+descriptor is populated correctly 
+\end{DoxyNote}
+\begin{DoxyAuthor}{Author}
+Petre Rodan 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__MOD__DRIVERS_ga6e6fdd95a04fa62bbf90fe74096c6abe}\label{group__MOD__DRIVERS_ga6e6fdd95a04fa62bbf90fe74096c6abe}} 
+\index{Maxim DS3234 IC driver@{Maxim DS3234 IC driver}!DS3234\_A1\_SMHDw\_MATCH@{DS3234\_A1\_SMHDw\_MATCH}}
+\index{DS3234\_A1\_SMHDw\_MATCH@{DS3234\_A1\_SMHDw\_MATCH}!Maxim DS3234 IC driver@{Maxim DS3234 IC driver}}
+\doxysubsubsection{\texorpdfstring{DS3234\_A1\_SMHDw\_MATCH}{DS3234\_A1\_SMHDw\_MATCH}}
+{\footnotesize\ttfamily \#define DS3234\+\_\+\+A1\+\_\+\+SMHDw\+\_\+\+MATCH~0x10}
+
+
+
+alarm when seconds, minutes, hours and day of week match 
+
+alarm2 flags \mbox{\Hypertarget{group__MOD__DRIVERS_ga2527c7b95a004abdd3136e3583796594}\label{group__MOD__DRIVERS_ga2527c7b95a004abdd3136e3583796594}} 
+\index{Maxim DS3234 IC driver@{Maxim DS3234 IC driver}!DS3234\_A1F@{DS3234\_A1F}}
+\index{DS3234\_A1F@{DS3234\_A1F}!Maxim DS3234 IC driver@{Maxim DS3234 IC driver}}
+\doxysubsubsection{\texorpdfstring{DS3234\_A1F}{DS3234\_A1F}}
+{\footnotesize\ttfamily \#define DS3234\+\_\+\+A1F~0x01}
+
+
+
+control/status register 0x0f 
+
+Alarm 1 Flag -\/ (1 if alarm1 was triggered) \mbox{\Hypertarget{group__MOD__DRIVERS_gafe8dd218372e04b452af989298d7b28c}\label{group__MOD__DRIVERS_gafe8dd218372e04b452af989298d7b28c}} 
+\index{Maxim DS3234 IC driver@{Maxim DS3234 IC driver}!DS3234\_A1IE@{DS3234\_A1IE}}
+\index{DS3234\_A1IE@{DS3234\_A1IE}!Maxim DS3234 IC driver@{Maxim DS3234 IC driver}}
+\doxysubsubsection{\texorpdfstring{DS3234\_A1IE}{DS3234\_A1IE}}
+{\footnotesize\ttfamily \#define DS3234\+\_\+\+A1\+IE~0x01}
+
+
+
+control register 0x0e 
+
+Alarm1 interrupt enable (1 to enable) \mbox{\Hypertarget{group__MOD__DRIVERS_gacf80fb8c1798cc0e9cf95c0d4268884f}\label{group__MOD__DRIVERS_gacf80fb8c1798cc0e9cf95c0d4268884f}} 
+\index{Maxim DS3234 IC driver@{Maxim DS3234 IC driver}!DS3234\_OSF@{DS3234\_OSF}}
+\index{DS3234\_OSF@{DS3234\_OSF}!Maxim DS3234 IC driver@{Maxim DS3234 IC driver}}
+\doxysubsubsection{\texorpdfstring{DS3234\_OSF}{DS3234\_OSF}}
+{\footnotesize\ttfamily \#define DS3234\+\_\+\+OSF~0x80}
+
+
+
+Oscillator Stop Flag (if 1 then oscillator has stopped and date might be innacurate) 
+
+alarm1 flags \mbox{\Hypertarget{group__MOD__DRIVERS_ga1ca67574d5d08f7c2e663df524a939c3}\label{group__MOD__DRIVERS_ga1ca67574d5d08f7c2e663df524a939c3}} 
+\index{Maxim DS3234 IC driver@{Maxim DS3234 IC driver}!DS3234\_REG\_RTC@{DS3234\_REG\_RTC}}
+\index{DS3234\_REG\_RTC@{DS3234\_REG\_RTC}!Maxim DS3234 IC driver@{Maxim DS3234 IC driver}}
+\doxysubsubsection{\texorpdfstring{DS3234\_REG\_RTC}{DS3234\_REG\_RTC}}
+{\footnotesize\ttfamily \#define DS3234\+\_\+\+REG\+\_\+\+RTC~0x00}
+
+
+
+DS3234 registers. 
+
+real time clock seconds 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__MOD__DRIVERS_gab61a45288237b0797dbea9f964d3a2d3}\label{group__MOD__DRIVERS_gab61a45288237b0797dbea9f964d3a2d3}} 
+\index{Maxim DS3234 IC driver@{Maxim DS3234 IC driver}!DS3234\_read@{DS3234\_read}}
+\index{DS3234\_read@{DS3234\_read}!Maxim DS3234 IC driver@{Maxim DS3234 IC driver}}
+\doxysubsubsection{\texorpdfstring{DS3234\_read()}{DS3234\_read()}}
+{\footnotesize\ttfamily uint8\+\_\+t DS3234\+\_\+read (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__MOD__SPI_ga3495a938aee225923b71614a09e22bc3}{spi\+\_\+descriptor}} $\ast$}]{spid,  }\item[{const uint8\+\_\+t}]{addr,  }\item[{uint8\+\_\+t $\ast$}]{buf,  }\item[{const uint8\+\_\+t}]{count }\end{DoxyParamCaption})}
+
+read count number of bytes from the ds3234 
+\begin{DoxyParams}{Parameters}
+{\em spid} & descriptor containing the SPI subsystem base address and CS signal control \\
+\hline
+{\em addr} & starting address -\/ use the {\itshape read} address from the datasheet \mbox{[}0x0 -\/ 0x19\mbox{]} \\
+\hline
+{\em buf} & pre-\/allocated buffer that holds the data. must be at least count bytes in length \\
+\hline
+{\em count} & number of bytes to be transfered \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+non-\/zero on failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__MOD__DRIVERS_gaaa7bd19cdc31e2903f6887e9b3120afa}\label{group__MOD__DRIVERS_gaaa7bd19cdc31e2903f6887e9b3120afa}} 
+\index{Maxim DS3234 IC driver@{Maxim DS3234 IC driver}!DS3234\_read\_a1@{DS3234\_read\_a1}}
+\index{DS3234\_read\_a1@{DS3234\_read\_a1}!Maxim DS3234 IC driver@{Maxim DS3234 IC driver}}
+\doxysubsubsection{\texorpdfstring{DS3234\_read\_a1()}{DS3234\_read\_a1()}}
+{\footnotesize\ttfamily uint8\+\_\+t DS3234\+\_\+read\+\_\+a1 (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__MOD__SPI_ga3495a938aee225923b71614a09e22bc3}{spi\+\_\+descriptor}} $\ast$}]{spid,  }\item[{struct \mbox{\hyperlink{structts}{ts}} $\ast$}]{t,  }\item[{uint8\+\_\+t $\ast$}]{flags }\end{DoxyParamCaption})}
+
+read alarm A1 registers 
+\begin{DoxyParams}{Parameters}
+{\em spid} & descriptor containing the SPI subsystem base address and CS signal control \\
+\hline
+{\em t} & date and time struct. only the second, minute, hour, day is used from the struct \\
+\hline
+{\em flags} & what time element to trigger on \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+non-\/zero on failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__MOD__DRIVERS_ga7f62e0a85c9e780c42260257ae81cd86}\label{group__MOD__DRIVERS_ga7f62e0a85c9e780c42260257ae81cd86}} 
+\index{Maxim DS3234 IC driver@{Maxim DS3234 IC driver}!DS3234\_read\_a2@{DS3234\_read\_a2}}
+\index{DS3234\_read\_a2@{DS3234\_read\_a2}!Maxim DS3234 IC driver@{Maxim DS3234 IC driver}}
+\doxysubsubsection{\texorpdfstring{DS3234\_read\_a2()}{DS3234\_read\_a2()}}
+{\footnotesize\ttfamily uint8\+\_\+t DS3234\+\_\+read\+\_\+a2 (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__MOD__SPI_ga3495a938aee225923b71614a09e22bc3}{spi\+\_\+descriptor}} $\ast$}]{spid,  }\item[{struct \mbox{\hyperlink{structts}{ts}} $\ast$}]{t,  }\item[{uint8\+\_\+t $\ast$}]{flags }\end{DoxyParamCaption})}
+
+read alarm A2 registers 
+\begin{DoxyParams}{Parameters}
+{\em spid} & descriptor containing the SPI subsystem base address and CS signal control \\
+\hline
+{\em t} & date and time struct. only the minute, hour, day is used from the struct \\
+\hline
+{\em flags} & what time element to trigger on \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+non-\/zero on failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__MOD__DRIVERS_gab0df3545bfb9aae7f708e3580ba8d778}\label{group__MOD__DRIVERS_gab0df3545bfb9aae7f708e3580ba8d778}} 
+\index{Maxim DS3234 IC driver@{Maxim DS3234 IC driver}!DS3234\_read\_aging@{DS3234\_read\_aging}}
+\index{DS3234\_read\_aging@{DS3234\_read\_aging}!Maxim DS3234 IC driver@{Maxim DS3234 IC driver}}
+\doxysubsubsection{\texorpdfstring{DS3234\_read\_aging()}{DS3234\_read\_aging()}}
+{\footnotesize\ttfamily uint8\+\_\+t DS3234\+\_\+read\+\_\+aging (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__MOD__SPI_ga3495a938aee225923b71614a09e22bc3}{spi\+\_\+descriptor}} $\ast$}]{spid,  }\item[{int8\+\_\+t $\ast$}]{value }\end{DoxyParamCaption})}
+
+read and convert the aging register from the IC 
+\begin{DoxyParams}{Parameters}
+{\em spid} & descriptor containing the SPI subsystem base address and CS signal control \\
+\hline
+{\em value} & crystal aging register value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+non-\/zero on failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__MOD__DRIVERS_gaff4bed0ed9e1ccf321036fa8a94d3b97}\label{group__MOD__DRIVERS_gaff4bed0ed9e1ccf321036fa8a94d3b97}} 
+\index{Maxim DS3234 IC driver@{Maxim DS3234 IC driver}!DS3234\_read\_reg@{DS3234\_read\_reg}}
+\index{DS3234\_read\_reg@{DS3234\_read\_reg}!Maxim DS3234 IC driver@{Maxim DS3234 IC driver}}
+\doxysubsubsection{\texorpdfstring{DS3234\_read\_reg()}{DS3234\_read\_reg()}}
+{\footnotesize\ttfamily uint8\+\_\+t DS3234\+\_\+read\+\_\+reg (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__MOD__SPI_ga3495a938aee225923b71614a09e22bc3}{spi\+\_\+descriptor}} $\ast$}]{spid,  }\item[{const uint8\+\_\+t}]{addr,  }\item[{uint8\+\_\+t $\ast$}]{val }\end{DoxyParamCaption})}
+
+read one register from the ds3234 
+\begin{DoxyParams}{Parameters}
+{\em spid} & descriptor containing the SPI subsystem base address and CS signal control \\
+\hline
+{\em addr} & register address -\/ use the {\itshape read} address from the datasheet \mbox{[}0x0 -\/ 0x19\mbox{]} \\
+\hline
+{\em vat} & uint8\+\_\+t container for the read value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+non-\/zero on failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__MOD__DRIVERS_gaa676d5208f062bc1d97a642f2be978eb}\label{group__MOD__DRIVERS_gaa676d5208f062bc1d97a642f2be978eb}} 
+\index{Maxim DS3234 IC driver@{Maxim DS3234 IC driver}!DS3234\_read\_rtc@{DS3234\_read\_rtc}}
+\index{DS3234\_read\_rtc@{DS3234\_read\_rtc}!Maxim DS3234 IC driver@{Maxim DS3234 IC driver}}
+\doxysubsubsection{\texorpdfstring{DS3234\_read\_rtc()}{DS3234\_read\_rtc()}}
+{\footnotesize\ttfamily uint8\+\_\+t DS3234\+\_\+read\+\_\+rtc (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__MOD__SPI_ga3495a938aee225923b71614a09e22bc3}{spi\+\_\+descriptor}} $\ast$}]{spid,  }\item[{struct \mbox{\hyperlink{structts}{ts}} $\ast$}]{t }\end{DoxyParamCaption})}
+
+read date and time from the IC 
+\begin{DoxyParams}{Parameters}
+{\em spid} & descriptor containing the SPI subsystem base address and CS signal control \\
+\hline
+{\em t} & date and time struct \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+non-\/zero on failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__MOD__DRIVERS_ga8c34d8b43e4d9fcab814e9f93eaa8c92}\label{group__MOD__DRIVERS_ga8c34d8b43e4d9fcab814e9f93eaa8c92}} 
+\index{Maxim DS3234 IC driver@{Maxim DS3234 IC driver}!DS3234\_read\_sram@{DS3234\_read\_sram}}
+\index{DS3234\_read\_sram@{DS3234\_read\_sram}!Maxim DS3234 IC driver@{Maxim DS3234 IC driver}}
+\doxysubsubsection{\texorpdfstring{DS3234\_read\_sram()}{DS3234\_read\_sram()}}
+{\footnotesize\ttfamily uint8\+\_\+t DS3234\+\_\+read\+\_\+sram (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__MOD__SPI_ga3495a938aee225923b71614a09e22bc3}{spi\+\_\+descriptor}} $\ast$}]{spid,  }\item[{const uint8\+\_\+t}]{addr,  }\item[{uint8\+\_\+t $\ast$}]{buf,  }\item[{const uint8\+\_\+t}]{count }\end{DoxyParamCaption})}
+
+read count number of bytes from the SRAM of ds3234 
+\begin{DoxyParams}{Parameters}
+{\em spid} & descriptor containing the SPI subsystem base address and CS signal control \\
+\hline
+{\em addr} & starting SRAM relative address \mbox{[}0x0 -\/ 0xff\mbox{]} \\
+\hline
+{\em buf} & pre-\/allocated buffer that will hold the data. must be at least count bytes in length \\
+\hline
+{\em count} & number of bytes to be transfered \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+non-\/zero on failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__MOD__DRIVERS_ga4ab02d108d17a4d5d03955f0d524ec5a}\label{group__MOD__DRIVERS_ga4ab02d108d17a4d5d03955f0d524ec5a}} 
+\index{Maxim DS3234 IC driver@{Maxim DS3234 IC driver}!DS3234\_read\_temp@{DS3234\_read\_temp}}
+\index{DS3234\_read\_temp@{DS3234\_read\_temp}!Maxim DS3234 IC driver@{Maxim DS3234 IC driver}}
+\doxysubsubsection{\texorpdfstring{DS3234\_read\_temp()}{DS3234\_read\_temp()}}
+{\footnotesize\ttfamily uint8\+\_\+t DS3234\+\_\+read\+\_\+temp (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__MOD__SPI_ga3495a938aee225923b71614a09e22bc3}{spi\+\_\+descriptor}} $\ast$}]{spid,  }\item[{int16\+\_\+t $\ast$}]{value }\end{DoxyParamCaption})}
+
+read the temperature sensor from within the IC 
+\begin{DoxyParams}{Parameters}
+{\em spid} & descriptor containing the SPI subsystem base address and CS signal control \\
+\hline
+{\em value} & temperature in degrees C multiplied by 100 -\/ in int16\+\_\+t form \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+non-\/zero on failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__MOD__DRIVERS_ga3c8b23e40886e382d3fb2c56bf6fb98f}\label{group__MOD__DRIVERS_ga3c8b23e40886e382d3fb2c56bf6fb98f}} 
+\index{Maxim DS3234 IC driver@{Maxim DS3234 IC driver}!DS3234\_write@{DS3234\_write}}
+\index{DS3234\_write@{DS3234\_write}!Maxim DS3234 IC driver@{Maxim DS3234 IC driver}}
+\doxysubsubsection{\texorpdfstring{DS3234\_write()}{DS3234\_write()}}
+{\footnotesize\ttfamily uint8\+\_\+t DS3234\+\_\+write (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__MOD__SPI_ga3495a938aee225923b71614a09e22bc3}{spi\+\_\+descriptor}} $\ast$}]{spid,  }\item[{const uint8\+\_\+t}]{addr,  }\item[{uint8\+\_\+t $\ast$}]{buf,  }\item[{const uint8\+\_\+t}]{count }\end{DoxyParamCaption})}
+
+write count number of bytes to the ds3234 
+\begin{DoxyParams}{Parameters}
+{\em spid} & descriptor containing the SPI subsystem base address and CS signal control \\
+\hline
+{\em addr} & starting address -\/ use the {\itshape read} address from the datasheet \mbox{[}0x0 -\/ 0x19\mbox{]} \\
+\hline
+{\em buf} & pre-\/allocated buffer that will hold the data. must be at least count bytes in length \\
+\hline
+{\em count} & number of bytes to be transfered \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+non-\/zero on failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__MOD__DRIVERS_ga0955931ebf7cd9965a94aba94d8c6624}\label{group__MOD__DRIVERS_ga0955931ebf7cd9965a94aba94d8c6624}} 
+\index{Maxim DS3234 IC driver@{Maxim DS3234 IC driver}!DS3234\_write\_a1@{DS3234\_write\_a1}}
+\index{DS3234\_write\_a1@{DS3234\_write\_a1}!Maxim DS3234 IC driver@{Maxim DS3234 IC driver}}
+\doxysubsubsection{\texorpdfstring{DS3234\_write\_a1()}{DS3234\_write\_a1()}}
+{\footnotesize\ttfamily uint8\+\_\+t DS3234\+\_\+write\+\_\+a1 (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__MOD__SPI_ga3495a938aee225923b71614a09e22bc3}{spi\+\_\+descriptor}} $\ast$}]{spid,  }\item[{const struct \mbox{\hyperlink{structts}{ts}} $\ast$}]{t,  }\item[{const uint8\+\_\+t}]{flags }\end{DoxyParamCaption})}
+
+write to alarm A1 registers 
+\begin{DoxyParams}{Parameters}
+{\em spid} & descriptor containing the SPI subsystem base address and CS signal control \\
+\hline
+{\em t} & date and time struct. only the second, minute, hour, day is used from the struct \\
+\hline
+{\em flags} & what time element to trigger on \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+non-\/zero on failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__MOD__DRIVERS_ga989d5c69de25e36530b8fd6673a95b0d}\label{group__MOD__DRIVERS_ga989d5c69de25e36530b8fd6673a95b0d}} 
+\index{Maxim DS3234 IC driver@{Maxim DS3234 IC driver}!DS3234\_write\_a2@{DS3234\_write\_a2}}
+\index{DS3234\_write\_a2@{DS3234\_write\_a2}!Maxim DS3234 IC driver@{Maxim DS3234 IC driver}}
+\doxysubsubsection{\texorpdfstring{DS3234\_write\_a2()}{DS3234\_write\_a2()}}
+{\footnotesize\ttfamily uint8\+\_\+t DS3234\+\_\+write\+\_\+a2 (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__MOD__SPI_ga3495a938aee225923b71614a09e22bc3}{spi\+\_\+descriptor}} $\ast$}]{spid,  }\item[{const struct \mbox{\hyperlink{structts}{ts}} $\ast$}]{t,  }\item[{const uint8\+\_\+t}]{flags }\end{DoxyParamCaption})}
+
+write to alarm A1 registers 
+\begin{DoxyParams}{Parameters}
+{\em spid} & descriptor containing the SPI subsystem base address and CS signal control \\
+\hline
+{\em t} & date and time struct. only the second, minute, hour, day is used from the struct \\
+\hline
+{\em flags} & what time element to trigger on \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+non-\/zero on failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__MOD__DRIVERS_gaf066de47d50a49f201a4dd2f18f12282}\label{group__MOD__DRIVERS_gaf066de47d50a49f201a4dd2f18f12282}} 
+\index{Maxim DS3234 IC driver@{Maxim DS3234 IC driver}!DS3234\_write\_aging@{DS3234\_write\_aging}}
+\index{DS3234\_write\_aging@{DS3234\_write\_aging}!Maxim DS3234 IC driver@{Maxim DS3234 IC driver}}
+\doxysubsubsection{\texorpdfstring{DS3234\_write\_aging()}{DS3234\_write\_aging()}}
+{\footnotesize\ttfamily uint8\+\_\+t DS3234\+\_\+write\+\_\+aging (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__MOD__SPI_ga3495a938aee225923b71614a09e22bc3}{spi\+\_\+descriptor}} $\ast$}]{spid,  }\item[{const int8\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+convert and write the aging register to the IC 
+\begin{DoxyParams}{Parameters}
+{\em spid} & descriptor containing the SPI subsystem base address and CS signal control \\
+\hline
+{\em value} & crystal aging value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+non-\/zero on failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__MOD__DRIVERS_ga87b8158724302c4c51d9b1c67a7cc075}\label{group__MOD__DRIVERS_ga87b8158724302c4c51d9b1c67a7cc075}} 
+\index{Maxim DS3234 IC driver@{Maxim DS3234 IC driver}!DS3234\_write\_reg@{DS3234\_write\_reg}}
+\index{DS3234\_write\_reg@{DS3234\_write\_reg}!Maxim DS3234 IC driver@{Maxim DS3234 IC driver}}
+\doxysubsubsection{\texorpdfstring{DS3234\_write\_reg()}{DS3234\_write\_reg()}}
+{\footnotesize\ttfamily uint8\+\_\+t DS3234\+\_\+write\+\_\+reg (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__MOD__SPI_ga3495a938aee225923b71614a09e22bc3}{spi\+\_\+descriptor}} $\ast$}]{spid,  }\item[{const uint8\+\_\+t}]{addr,  }\item[{const uint8\+\_\+t}]{val }\end{DoxyParamCaption})}
+
+write one register to the ds3234 
+\begin{DoxyParams}{Parameters}
+{\em spid} & descriptor containing the SPI subsystem base address and CS signal control \\
+\hline
+{\em addr} & register address -\/ use the {\itshape read} address from the datasheet \mbox{[}0x0 -\/ 0x19\mbox{]} \\
+\hline
+{\em vat} & byte that will get written \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+non-\/zero on failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__MOD__DRIVERS_ga15bcf534bdeaec52904d859a23c117e6}\label{group__MOD__DRIVERS_ga15bcf534bdeaec52904d859a23c117e6}} 
+\index{Maxim DS3234 IC driver@{Maxim DS3234 IC driver}!DS3234\_write\_rtc@{DS3234\_write\_rtc}}
+\index{DS3234\_write\_rtc@{DS3234\_write\_rtc}!Maxim DS3234 IC driver@{Maxim DS3234 IC driver}}
+\doxysubsubsection{\texorpdfstring{DS3234\_write\_rtc()}{DS3234\_write\_rtc()}}
+{\footnotesize\ttfamily uint8\+\_\+t DS3234\+\_\+write\+\_\+rtc (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__MOD__SPI_ga3495a938aee225923b71614a09e22bc3}{spi\+\_\+descriptor}} $\ast$}]{spid,  }\item[{struct \mbox{\hyperlink{structts}{ts}} $\ast$}]{t }\end{DoxyParamCaption})}
+
+write date and time to the IC 
+\begin{DoxyParams}{Parameters}
+{\em spid} & descriptor containing the SPI subsystem base address and CS signal control \\
+\hline
+{\em t} & date and time struct \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+non-\/zero on failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__MOD__DRIVERS_ga56c94b3207c9f04478c5130d6d584299}\label{group__MOD__DRIVERS_ga56c94b3207c9f04478c5130d6d584299}} 
+\index{Maxim DS3234 IC driver@{Maxim DS3234 IC driver}!DS3234\_write\_sram@{DS3234\_write\_sram}}
+\index{DS3234\_write\_sram@{DS3234\_write\_sram}!Maxim DS3234 IC driver@{Maxim DS3234 IC driver}}
+\doxysubsubsection{\texorpdfstring{DS3234\_write\_sram()}{DS3234\_write\_sram()}}
+{\footnotesize\ttfamily uint8\+\_\+t DS3234\+\_\+write\+\_\+sram (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__MOD__SPI_ga3495a938aee225923b71614a09e22bc3}{spi\+\_\+descriptor}} $\ast$}]{spid,  }\item[{const uint8\+\_\+t}]{addr,  }\item[{uint8\+\_\+t $\ast$}]{buf,  }\item[{const uint8\+\_\+t}]{count }\end{DoxyParamCaption})}
+
+write count number of bytes to the SRAM of ds3234 
+\begin{DoxyParams}{Parameters}
+{\em spid} & descriptor containing the SPI subsystem base address and CS signal control \\
+\hline
+{\em addr} & starting SRAM relative address \mbox{[}0x0 -\/ 0xff\mbox{]} \\
+\hline
+{\em buf} & buffer to be written. must be at least count bytes in length \\
+\hline
+{\em count} & number of bytes to be transfered \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+non-\/zero on failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__MOD__DRIVERS_ga1723cacf8656436393dd3c16b8779b92}\label{group__MOD__DRIVERS_ga1723cacf8656436393dd3c16b8779b92}} 
+\index{Maxim DS3234 IC driver@{Maxim DS3234 IC driver}!MCP42\_set\_pot@{MCP42\_set\_pot}}
+\index{MCP42\_set\_pot@{MCP42\_set\_pot}!Maxim DS3234 IC driver@{Maxim DS3234 IC driver}}
+\doxysubsubsection{\texorpdfstring{MCP42\_set\_pot()}{MCP42\_set\_pot()}}
+{\footnotesize\ttfamily void MCP42\+\_\+set\+\_\+pot (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__MOD__SPI_ga3495a938aee225923b71614a09e22bc3}{spi\+\_\+descriptor}} $\ast$}]{spid,  }\item[{const uint8\+\_\+t}]{pot\+\_\+ch0\+\_\+val,  }\item[{const uint8\+\_\+t}]{pot\+\_\+ch1\+\_\+val }\end{DoxyParamCaption})}
+
+set the potentiometer values of both channels of the chip 
+\begin{DoxyParams}{Parameters}
+{\em spid} & descriptor containing the SPI subsystem base address and CS signal control \\
+\hline
+{\em pot\+\_\+ch0\+\_\+val} & potentiometer tap for the first channel \mbox{[}0-\/255\mbox{]} \\
+\hline
+{\em pot\+\_\+ch1\+\_\+val} & potentiometer tap for the second channel \mbox{[}0-\/255\mbox{]} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__MOD__DRIVERS_ga654157de67fd31dea5d234f70961cb7d}\label{group__MOD__DRIVERS_ga654157de67fd31dea5d234f70961cb7d}} 
+\index{Maxim DS3234 IC driver@{Maxim DS3234 IC driver}!MCP42\_set\_pot\_ch@{MCP42\_set\_pot\_ch}}
+\index{MCP42\_set\_pot\_ch@{MCP42\_set\_pot\_ch}!Maxim DS3234 IC driver@{Maxim DS3234 IC driver}}
+\doxysubsubsection{\texorpdfstring{MCP42\_set\_pot\_ch()}{MCP42\_set\_pot\_ch()}}
+{\footnotesize\ttfamily void MCP42\+\_\+set\+\_\+pot\+\_\+ch (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__MOD__SPI_ga3495a938aee225923b71614a09e22bc3}{spi\+\_\+descriptor}} $\ast$}]{spid,  }\item[{const uint8\+\_\+t}]{pot\+\_\+id,  }\item[{const uint8\+\_\+t}]{pot\+\_\+val }\end{DoxyParamCaption})}
+
+set the potentiometer value to one of the channels of the chip 
+\begin{DoxyParams}{Parameters}
+{\em spid} & descriptor containing the SPI subsystem base address and CS signal control \\
+\hline
+{\em pot\+\_\+id} & the channel/pot from within the chip \mbox{[}0-\/1\mbox{]} \\
+\hline
+{\em pot\+\_\+val} & potentiometer tap \mbox{[}0-\/255\mbox{]} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__MOD__DRIVERS_ga2e94464c48d3712ad70ab82c78c2fde2}\label{group__MOD__DRIVERS_ga2e94464c48d3712ad70ab82c78c2fde2}} 
+\index{Maxim DS3234 IC driver@{Maxim DS3234 IC driver}!MCP42\_shutdown\_pot@{MCP42\_shutdown\_pot}}
+\index{MCP42\_shutdown\_pot@{MCP42\_shutdown\_pot}!Maxim DS3234 IC driver@{Maxim DS3234 IC driver}}
+\doxysubsubsection{\texorpdfstring{MCP42\_shutdown\_pot()}{MCP42\_shutdown\_pot()}}
+{\footnotesize\ttfamily void MCP42\+\_\+shutdown\+\_\+pot (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__MOD__SPI_ga3495a938aee225923b71614a09e22bc3}{spi\+\_\+descriptor}} $\ast$}]{spid,  }\item[{const uint8\+\_\+t}]{pot\+\_\+id }\end{DoxyParamCaption})}
+
+shutdown one of the channels of the chip identified by \textquotesingle{}mcp\+\_\+id\textquotesingle{} 
+\begin{DoxyParams}{Parameters}
+{\em spid} & descriptor containing the SPI subsystem base address and CS signal control \\
+\hline
+{\em pot\+\_\+id} & the channel/pot from within the chip \mbox{[}0-\/1\mbox{]} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__MOD__DRIVERS_ga9577844562bb6c2f61b5a2d2a6e405a5}\label{group__MOD__DRIVERS_ga9577844562bb6c2f61b5a2d2a6e405a5}} 
+\index{Maxim DS3234 IC driver@{Maxim DS3234 IC driver}!pga\_set\_volume@{pga\_set\_volume}}
+\index{pga\_set\_volume@{pga\_set\_volume}!Maxim DS3234 IC driver@{Maxim DS3234 IC driver}}
+\doxysubsubsection{\texorpdfstring{pga\_set\_volume()}{pga\_set\_volume()}}
+{\footnotesize\ttfamily void pga\+\_\+set\+\_\+volume (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__MOD__SPI_ga3495a938aee225923b71614a09e22bc3}{spi\+\_\+descriptor}} $\ast$}]{spid,  }\item[{const uint8\+\_\+t}]{vol\+\_\+right,  }\item[{const uint8\+\_\+t}]{vol\+\_\+left }\end{DoxyParamCaption})}
+
+set the volume for both channels of the PGA 
+\begin{DoxyParams}{Parameters}
+{\em spid} & descriptor containing the SPI subsystem base address and CS signal control \\
+\hline
+{\em vol\+\_\+right} & potentiometer tap for right channel \mbox{[}0-\/255\mbox{]} \\
+\hline
+{\em vol\+\_\+left} & potentiometer tap for left channel \mbox{[}0-\/255\mbox{]} \\
+\hline
+\end{DoxyParams}

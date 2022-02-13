@@ -1,0 +1,46 @@
+\hypertarget{old__drivers_2drivers_2i2c_8c}{}\doxysection{old\+\_\+drivers/drivers/i2c.c File Reference}
+\label{old__drivers_2drivers_2i2c_8c}\index{old\_drivers/drivers/i2c.c@{old\_drivers/drivers/i2c.c}}
+
+
+Code for \mbox{\hyperlink{group__MOD__I2C}{I2C Bus}}.  
+
+
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}proj.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}i2c.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}i2c\+\_\+internal.\+h\char`\"{}}\newline
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__MOD__I2C_ga7ef78b55fc83cfdc2167e4bd97464736}\label{group__MOD__I2C_ga7ef78b55fc83cfdc2167e4bd97464736}} 
+enum {\bfseries i2c\+\_\+state\+\_\+t} \{ \newline
+{\bfseries SM\+\_\+\+SEND\+\_\+\+ADDR}
+, {\bfseries SM\+\_\+\+WRITE\+\_\+\+DATA}
+, {\bfseries SM\+\_\+\+SEND\+\_\+\+RESTART}
+, {\bfseries SM\+\_\+\+READ\+\_\+\+DATA}
+, \newline
+{\bfseries SM\+\_\+\+DONE}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries \+\_\+\+\_\+attribute\+\_\+\+\_\+} ((interrupt(I2\+C\+\_\+\+ISR\+\_\+\+VECTOR)))
+\item 
+void \mbox{\hyperlink{group__MOD__I2C_ga5730d9445429351b9f750084c5cb5aae}{i2c\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize the I2C master module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOD__I2C_gac15efb7df754e311fb8084edb7eb187a}{i2c\+\_\+uninit}} (void)
+\begin{DoxyCompactList}\small\item\em Uninitialize the I2C master module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__MOD__I2C_gaa5805737db64d1f0376404659e54477e}{i2c\+\_\+transfer\+\_\+start}} (const \mbox{\hyperlink{structi2c__package__t}{i2c\+\_\+package\+\_\+t}} $\ast$pkg, void($\ast$callback)(\mbox{\hyperlink{group__MOD__I2C_gada1e8e589688e2d6626421d8d85d9c53}{i2c\+\_\+status\+\_\+t}} result))
+\begin{DoxyCompactList}\small\item\em Start an I2C transfer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__MOD__I2C_gada1e8e589688e2d6626421d8d85d9c53}{i2c\+\_\+status\+\_\+t}} \mbox{\hyperlink{group__MOD__I2C_ga78f76f18ee80f78cbf6172166ebeb8f8}{i2c\+\_\+transfer\+\_\+status}} (void)
+\begin{DoxyCompactList}\small\item\em Get the status of the I2C module. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Code for \mbox{\hyperlink{group__MOD__I2C}{I2C Bus}}. 
+
+\begin{DoxyAuthor}{Author}
+Alex Mykyta 
+\end{DoxyAuthor}

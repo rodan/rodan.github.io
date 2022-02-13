@@ -1,0 +1,126 @@
+\hypertarget{group__lib__math}{}\doxysection{Mathematics library}
+\label{group__lib__math}\index{Mathematics library@{Mathematics library}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__lib__math_ga598a3330b3c21701223ee0ca14316eca}\label{group__lib__math_ga598a3330b3c21701223ee0ca14316eca}} 
+\#define \mbox{\hyperlink{group__lib__math_ga598a3330b3c21701223ee0ca14316eca}{PI}}~3.\+14159265358
+\begin{DoxyCompactList}\small\item\em pi used by \mbox{\hyperlink{group__lib__math_ga83d60f60bc01e1a4ef1b9700efc9532f}{\+\_\+atan2f()}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__lib__math_ga193913ea25238426ec5f9cbe3f2fb40b}\label{group__lib__math_ga193913ea25238426ec5f9cbe3f2fb40b}} 
+\#define \mbox{\hyperlink{group__lib__math_ga193913ea25238426ec5f9cbe3f2fb40b}{PI\+\_\+\+FLOAT}}~3.\+14159265f
+\begin{DoxyCompactList}\small\item\em float pi used by \mbox{\hyperlink{group__lib__math_ga83d60f60bc01e1a4ef1b9700efc9532f}{\+\_\+atan2f()}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__lib__math_ga63e8facff44c6bbbf018d469d74a557a}\label{group__lib__math_ga63e8facff44c6bbbf018d469d74a557a}} 
+\#define \mbox{\hyperlink{group__lib__math_ga63e8facff44c6bbbf018d469d74a557a}{PIBY2\+\_\+\+FLOAT}}~1.\+5707963f
+\begin{DoxyCompactList}\small\item\em half pi used by \mbox{\hyperlink{group__lib__math_ga83d60f60bc01e1a4ef1b9700efc9532f}{\+\_\+atan2f()}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__lib__math_ga2bda1a81ce3474772a8a1f165e54516e}\label{group__lib__math_ga2bda1a81ce3474772a8a1f165e54516e}} 
+\#define \mbox{\hyperlink{group__lib__math_ga2bda1a81ce3474772a8a1f165e54516e}{PREC}}~5
+\begin{DoxyCompactList}\small\item\em precision used by \mbox{\hyperlink{group__lib__math_gad06a8c25f9991c9c33e5e1ced3e8f9e6}{\+\_\+sin()}} and \mbox{\hyperlink{group__lib__math_gab07aa9b6dbaaadfee21658a3e083cc95}{\+\_\+cos()}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{group__lib__math_ga83d60f60bc01e1a4ef1b9700efc9532f}{\+\_\+atan2f}} (float y, float x)
+\item 
+float \mbox{\hyperlink{group__lib__math_gad06a8c25f9991c9c33e5e1ced3e8f9e6}{\+\_\+sin}} (const float x)
+\item 
+float \mbox{\hyperlink{group__lib__math_gab07aa9b6dbaaadfee21658a3e083cc95}{\+\_\+cos}} (const float x)
+\item 
+float \mbox{\hyperlink{group__lib__math_ga695696e677d4a04d000def56d4579748}{\+\_\+sqrt}} (const float x)
+\item 
+float \mbox{\hyperlink{group__lib__math_gab7bf7544694bd3c0a36a8eed58c3492d}{radians}} (const float x)
+\item 
+float \mbox{\hyperlink{group__lib__math_ga3ff85dec460e79b13e6a81aee4966c33}{sq}} (const float x)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+simplified functions for trigonometric calculations
+
+to be used when either the math functions are missing from libc or when space is at a premium 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__lib__math_ga83d60f60bc01e1a4ef1b9700efc9532f}\label{group__lib__math_ga83d60f60bc01e1a4ef1b9700efc9532f}} 
+\index{Mathematics library@{Mathematics library}!\_atan2f@{\_atan2f}}
+\index{\_atan2f@{\_atan2f}!Mathematics library@{Mathematics library}}
+\doxysubsubsection{\texorpdfstring{\_atan2f()}{\_atan2f()}}
+{\footnotesize\ttfamily float \+\_\+atan2f (\begin{DoxyParamCaption}\item[{float}]{y,  }\item[{float}]{x }\end{DoxyParamCaption})}
+
+calculate arc tangent function of two variables 
+\begin{DoxyParams}{Parameters}
+{\em x} & first variable \\
+\hline
+{\em y} & second variable \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+calculated value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__lib__math_gab07aa9b6dbaaadfee21658a3e083cc95}\label{group__lib__math_gab07aa9b6dbaaadfee21658a3e083cc95}} 
+\index{Mathematics library@{Mathematics library}!\_cos@{\_cos}}
+\index{\_cos@{\_cos}!Mathematics library@{Mathematics library}}
+\doxysubsubsection{\texorpdfstring{\_cos()}{\_cos()}}
+{\footnotesize\ttfamily float \+\_\+cos (\begin{DoxyParamCaption}\item[{const float}]{x }\end{DoxyParamCaption})}
+
+calculate the cosine of an input 
+\begin{DoxyParams}{Parameters}
+{\em x} & input value (float) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sin(input) (float) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__lib__math_gad06a8c25f9991c9c33e5e1ced3e8f9e6}\label{group__lib__math_gad06a8c25f9991c9c33e5e1ced3e8f9e6}} 
+\index{Mathematics library@{Mathematics library}!\_sin@{\_sin}}
+\index{\_sin@{\_sin}!Mathematics library@{Mathematics library}}
+\doxysubsubsection{\texorpdfstring{\_sin()}{\_sin()}}
+{\footnotesize\ttfamily float \+\_\+sin (\begin{DoxyParamCaption}\item[{const float}]{x }\end{DoxyParamCaption})}
+
+calculate sine of an input 
+\begin{DoxyParams}{Parameters}
+{\em x} & input value (float) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sin(input) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__lib__math_ga695696e677d4a04d000def56d4579748}\label{group__lib__math_ga695696e677d4a04d000def56d4579748}} 
+\index{Mathematics library@{Mathematics library}!\_sqrt@{\_sqrt}}
+\index{\_sqrt@{\_sqrt}!Mathematics library@{Mathematics library}}
+\doxysubsubsection{\texorpdfstring{\_sqrt()}{\_sqrt()}}
+{\footnotesize\ttfamily float \+\_\+sqrt (\begin{DoxyParamCaption}\item[{const float}]{x }\end{DoxyParamCaption})}
+
+calulate the square root of an input 
+\begin{DoxyParams}{Parameters}
+{\em x} & input value (float) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+sqrt(input) (float) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__lib__math_gab7bf7544694bd3c0a36a8eed58c3492d}\label{group__lib__math_gab7bf7544694bd3c0a36a8eed58c3492d}} 
+\index{Mathematics library@{Mathematics library}!radians@{radians}}
+\index{radians@{radians}!Mathematics library@{Mathematics library}}
+\doxysubsubsection{\texorpdfstring{radians()}{radians()}}
+{\footnotesize\ttfamily float radians (\begin{DoxyParamCaption}\item[{const float}]{x }\end{DoxyParamCaption})}
+
+convert degrees to radians 
+\begin{DoxyParams}{Parameters}
+{\em x} & degree value to be converted (float) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+resulting radians (float) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__lib__math_ga3ff85dec460e79b13e6a81aee4966c33}\label{group__lib__math_ga3ff85dec460e79b13e6a81aee4966c33}} 
+\index{Mathematics library@{Mathematics library}!sq@{sq}}
+\index{sq@{sq}!Mathematics library@{Mathematics library}}
+\doxysubsubsection{\texorpdfstring{sq()}{sq()}}
+{\footnotesize\ttfamily float sq (\begin{DoxyParamCaption}\item[{const float}]{x }\end{DoxyParamCaption})}
+
+return the square of a float 
+\begin{DoxyParams}{Parameters}
+{\em x} & input value to be squared (float) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+input$^\wedge$2 (float) 
+\end{DoxyReturn}

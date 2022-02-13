@@ -1,0 +1,95 @@
+\hypertarget{group__MOD__SPI}{}\doxysection{SPI Bus}
+\label{group__MOD__SPI}\index{SPI Bus@{SPI Bus}}
+
+
+Application-\/level SPI driver.  
+
+
+\doxysubsection*{Files}
+\begin{DoxyCompactItemize}
+\item 
+file \mbox{\hyperlink{glue_2generic_2spi_8h}{spi.\+h}}
+\begin{DoxyCompactList}\small\item\em Include file for \mbox{\hyperlink{group__MOD__SPI}{SPI Bus}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct__spi__descriptor}{\+\_\+spi\+\_\+descriptor}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__MOD__SPI_ga3495a938aee225923b71614a09e22bc3}\label{group__MOD__SPI_ga3495a938aee225923b71614a09e22bc3}} 
+typedef struct \mbox{\hyperlink{struct__spi__descriptor}{\+\_\+spi\+\_\+descriptor}} \mbox{\hyperlink{group__MOD__SPI_ga3495a938aee225923b71614a09e22bc3}{spi\+\_\+descriptor}}
+\begin{DoxyCompactList}\small\item\em struct that needs to be populated before the library calls are made \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group__MOD__SPI_gaf5df60c95c1d0f93fbeadebf72e103eb}{spi\+\_\+read\+\_\+frame}} (const uint16\+\_\+t base\+Address, uint8\+\_\+t $\ast$buf, const uint16\+\_\+t count)
+\begin{DoxyCompactList}\small\item\em read count number of bytes from the SPI \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group__MOD__SPI_ga84cd5c16c7a51d6d690c9f6be5b31f68}{spi\+\_\+write\+\_\+frame}} (const uint16\+\_\+t base\+Address, uint8\+\_\+t $\ast$buf, const uint16\+\_\+t count)
+\begin{DoxyCompactList}\small\item\em write count number of bytes to the SPI \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Application-\/level SPI driver. 
+
+\begin{DoxyAuthor}{Author}
+Petre Rodan 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__MOD__SPI_gaf5df60c95c1d0f93fbeadebf72e103eb}\label{group__MOD__SPI_gaf5df60c95c1d0f93fbeadebf72e103eb}} 
+\index{SPI Bus@{SPI Bus}!spi\_read\_frame@{spi\_read\_frame}}
+\index{spi\_read\_frame@{spi\_read\_frame}!SPI Bus@{SPI Bus}}
+\doxysubsubsection{\texorpdfstring{spi\_read\_frame()}{spi\_read\_frame()}}
+{\footnotesize\ttfamily uint8\+\_\+t spi\+\_\+read\+\_\+frame (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t}]{base\+Address,  }\item[{uint8\+\_\+t $\ast$}]{buf,  }\item[{const uint16\+\_\+t}]{count }\end{DoxyParamCaption})}
+
+
+
+read count number of bytes from the SPI 
+
+this function starts a new SPI read transaction as described by the provided parameters.
+
+\begin{DoxyNote}{Note}
+the CS signal is managed by the function calling spi\+\_\+read\+\_\+frame.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Address} & an MSP430-\/specific register address that marks the offset for the currently used SPI subsystem \\
+\hline
+{\em buf} & pre-\/allocated buffer that will hold the information \\
+\hline
+{\em count} & number of bytes to be transfered \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+non-\/zero on failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__MOD__SPI_ga84cd5c16c7a51d6d690c9f6be5b31f68}\label{group__MOD__SPI_ga84cd5c16c7a51d6d690c9f6be5b31f68}} 
+\index{SPI Bus@{SPI Bus}!spi\_write\_frame@{spi\_write\_frame}}
+\index{spi\_write\_frame@{spi\_write\_frame}!SPI Bus@{SPI Bus}}
+\doxysubsubsection{\texorpdfstring{spi\_write\_frame()}{spi\_write\_frame()}}
+{\footnotesize\ttfamily uint8\+\_\+t spi\+\_\+write\+\_\+frame (\begin{DoxyParamCaption}\item[{const uint16\+\_\+t}]{base\+Address,  }\item[{uint8\+\_\+t $\ast$}]{buf,  }\item[{const uint16\+\_\+t}]{count }\end{DoxyParamCaption})}
+
+
+
+write count number of bytes to the SPI 
+
+this function starts a new SPI write transaction as described by the provided parameters.
+
+\begin{DoxyNote}{Note}
+the CS signal is managed by the function calling spi\+\_\+read\+\_\+frame.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em base\+Address} & msp430-\/specific register address that marks the offset for the currently used SPI subsystem \\
+\hline
+{\em buf} & pre-\/allocated buffer that will hold the information \\
+\hline
+{\em count} & number of bytes to be transfered \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+non-\/zero on failure 
+\end{DoxyReturn}
