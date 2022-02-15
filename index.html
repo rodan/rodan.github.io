@@ -41,7 +41,7 @@
   <header id="header" class="fixed-top d-flex align-items-cente">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
 
-      <h2 class="logo me-auto me-lg-0"><a href="index.html">subdimension</a></h2>
+      <h2 class="logo me-auto me-lg-0"><a href="index.html"></a></h2>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -63,7 +63,6 @@
     <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
       <div class="row">
         <div class="col-lg-8">
-          <h1>Welcome to <span>sub</span>dimension</h1>
           <h2>enjoing 16bit micros, gentoo linux and opensource for the past two decades</h2>
 
           <div class="btns">
@@ -156,11 +155,11 @@
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-1 order-lg-2 content">
             <h3>7000 jig</h3>
-              <p>I was tasked to implement new functionality and write firmware from scratch for about a dozen different meters that provide measurements of liquid characteristics</p>
-              <p>this jig can interact with every single one of them providing both Proof of Concept for the new features and a platform for unit-testing every time new meter firmware is built</p>
-              <p>later a linux GUI was developed for easy interaction via a raspberry PI-powered display</p>
+              <p>new functionality and firmware from scratch had to be written for about a dozen different meters that provide measurements of liquid characteristics</p>
+              <p>this jig can interact with all of them providing both Proof of Concept for the new features and a platform for unit-testing every time new meter firmware is built</p>
+              <p>later a linux GUI was developed for easy interaction via a raspberry PI-powered, touch-enabled display</p>
               <p class="fst-italic">closed-source linux pc application + firmware, hardware design</p>
-              <p> <a href="https://photos.app.goo.gl/Q5Ar6u3Z5xs9cPmH9" target="_blank" class="book-a-table-btn">link to images & videos</a> <a href="https://drive.google.com/file/d/1Wve10sTdEO6eV5CRYKQnvv15rm44Usfc/view?usp=sharing" target="_blank" class="book-a-table-btn">link to manual</a>  </p>
+              <p> <a href="https://photos.app.goo.gl/Q5Ar6u3Z5xs9cPmH9" target="_blank" class="book-a-table-btn">link to images & videos</a> </p>
           </div>
         </div>
 
@@ -200,8 +199,8 @@
           <div class="col-lg-6 pt-4 pt-lg-0 order-1 order-lg-2 content">
             <h3>ampy</h3>
               <p>a highly-modular audio quad amplifier made from scratch that has a 5 channel mixer, variable front-rear panning and can be controlled via an infrared remote or a PC application via bluetooth</p>
-              <p>a total of three microcontrollers were inside this amp, all controlling different subsystems</p>
-              <p>on the pc side, the popular alsamixer linux application was forked and modified to communicate over bluetooth with the amp instead of controlling a local soundcard. it was able to control the volume for all channels (all with separate balance control), the front-rear pan and toggle the switches present on the power amp board.</p>
+              <p>a total of three microcontrollers were inside this amp, all supervising different subsystems</p>
+              <p>on the pc side, the popular alsamixer linux application was forked and modified to communicate over bluetooth with the amp instead of using a local soundcard. it was able to set the volume for all channels (all with separate balance control), the front-rear pan and toggle the switches present on the power amp board.</p>
               <p class="fst-italic">open-source linux application + hardware design + firmware</p>
               <p> <a href="https://photos.app.goo.gl/L8txqSKrcZFV2BbR8" target="_blank" class="book-a-table-btn">link to images</a> <a href="https://github.com/rodan/ampy" target="_blank" class="book-a-table-btn">link to repo</a></p>
           </div>
@@ -229,8 +228,8 @@
           <div class="col-lg-6 pt-4 pt-lg-0 order-1 order-lg-2 content">
             <h3>openchronos-rfsw</h3>
               <p>fork of the openchronos project that runs on a Texas Instruments ez430-chronos development board/watch</p>
-              <p>the modification that was added inserts a new menu page from which RF commands can be sent out via the onboard RF transceiver to Intertechno home-automation modules</p>
-              <p>the Intertechno protocol was reverse-engineered and implemented as msp430/arduino library so it can be used with non-RF capable microcontrollers. a small external module (or even the original remote control) can be used to send out the OOK signals on 433MHz</p>
+              <p>a new menu page was added from which RF commands can be sent out via the onboard RF transceiver to Intertechno home-automation modules</p>
+              <p>the Intertechno protocol was reverse-engineered and implemented as msp430/arduino library so it can be used with non-RF capable microcontrollers. a small external module (or even the original remote control) can be used to send out the OOK signals on a 433MHz carrier</p>
               <p class="fst-italic">open-source firmware <a href="https://photos.app.goo.gl/urJm1KrpPNyVTQta7" target="_blank" class="book-a-table-btn">link to images</a> <a href="https://github.com/rodan/openchronos-rfsw" target="_blank" class="book-a-table-btn">link to repo</a></p>
           </div>
         </div>
