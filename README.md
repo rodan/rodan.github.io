@@ -3,6 +3,6 @@ static website that contains friendly links to the github-hosted projects and to
 
 the live version of this document root repository is available [here](https://rodan.github.io "Projects showcase").
 
-a publically-available [bootstrap](https://bootstrapmade.com/) template was used to create this website.
+a publicly available [bootstrap](https://bootstrapmade.com/) template was used to create this website.
 
 
